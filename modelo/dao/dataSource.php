@@ -8,13 +8,13 @@ class dataSource {
     public function __construct(){
         try{
             //Aquí se pasa el nombre del Host(localhost) y el nombre de la base de datos(tabatabd)
-            $this->cadenaConexion="pgsql:host=localhost;dbname=macondo";
+            $this->cadenaConexion="pgsql:host=localhost;dbname=Macondo";
 
             //Aquí se crea la conexion con PDO y se pasan 3 parametros, la cadenaConexion que
             //se habia definido anteriormente, el nombre del usuario que tiene definido MySql(root)
             //y el último parámetro es la contraseña del mysql (en este caso no tiene contraseña,
             //por eso se deja declarado así "")
-            $this->conexion = new PDO($this->cadenaConexion,"postgres","1403");
+            $this->conexion = new PDO($this->cadenaConexion,"postgres","1234");
 
         } catch (PDOException $ex) {
 
