@@ -11,18 +11,33 @@
     <title>Registrarse</title>
     <link rel="shortcut icon" href="pictures/butterflyIcon.png">
     <link rel="stylesheet" href="styles/registro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <form action="">    
-            <input type="text" placeholder="Primer Nombre">
-            <input type="text" placeholder="Segundo Nombre">
-            <input type="text" placeholder="Primer Apellido">
-            <input type="text" placeholder="Segundo Apellido">
-            <input type="email" placeholder="Correo Electrónico">
-            <input type="password" placeholder="Contraseña">
-            <input type="password" placeholder="Confirmar Contraseña">
-            <button type="submit">Registrarse</button>
+    <div class="containerPrincipal">
+        <div class="containerLogo">
+            <img src="Pictures/butterflyLogo.png">
+            <p>Macondo</p>
+        </div>
+        <form action="">
+            <div>
+                <input type="text" id="inputPrimerNombre" placeholder="Primer Nombre">
+                <input type="text" id="inputSegundoNombre" placeholder="Segundo Nombre">
+            </div>    
+            <div>
+                <input type="text" id="inputPrimerApellido" placeholder="Primer Apellido">
+                <input type="text" id="inputSegundoApellido" placeholder="Segundo Apellido">
+            </div>
+            <div>
+                <input type="email" id="inputCorreoElectronico" placeholder="Correo Electrónico">
+            </div>
+            <div>
+                <input type="password" id="inputContraseña" placeholder="Contraseña">
+                <input type="password" id="inputConfirmarContraseña" placeholder="Confirmar Contraseña">
+            </div>
+            <button id="buttonSignUp" type="submit">Registrarse</button>
         </form>
     </div>
 </body>
