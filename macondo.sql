@@ -1,13 +1,13 @@
 CREATE TABLE usuario
 (
-  idUsuario INT NOT NULL,
+  idUsuario INT NOT NULL AUTO_INCREMENT,
   primerNombre VARCHAR(20) NOT NULL,
   segundoNombre VARCHAR(20),
   primerApellido VARCHAR(20) NOT NULL,
   segundoApellido VARCHAR(20),
   seudonimo VARCHAR(20),
   rol VARCHAR(10) NOT NULL,
-  foto VARCHAR(100) NOT NULL,
+  foto VARCHAR(100),
   estado INT NOT NULL,
   correo VARCHAR(50) NOT NULL,
   contrasena VARCHAR(30) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE usuario
 CREATE TABLE publicacion
 (
   tipo VARCHAR(20) NOT NULL,
-  idPublicacion INT NOT NULL,
+  idPublicacion INT NOT NULL AUTO_INCREMENT,
   fecha DATE NOT NULL,
   contenido VARCHAR(1000) NOT NULL,
   estado INT NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE publicacion
 
 CREATE TABLE comentario
 (
-  idComentario INT NOT NULL,
+  idComentario INT NOT NULL AUTO_INCREMENT,
   contenido VARCHAR(200) NOT NULL,
   fecha DATE NOT NULL,
   hora TIME NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE comentario
 
 CREATE TABLE reaccionComentario
 (
-  idReacciónComentario INT NOT NULL,
+  idReacciónComentario INT NOT NULL AUTO_INCREMENT,
   tipo VARCHAR(20) NOT NULL,
   idComentario INT NOT NULL,
   idUsuario INT NOT NULL,
@@ -55,14 +55,14 @@ CREATE TABLE reaccionComentario
 
 CREATE TABLE genero
 (
-  idGenero INT NOT NULL,
+  idGenero INT NOT NULL AUTO_INCREMENT,
   tipo VARCHAR(20) NOT NULL,
   PRIMARY KEY (idGenero)
 );
 
 CREATE TABLE reaccionPublicacion
 (
-  idReacciónPublicación INT NOT NULL,
+  idReacciónPublicación INT NOT NULL AUTO_INCREMENT,
   tipo VARCHAR(20) NOT NULL,
   idPublicacion INT NOT NULL,
   idUsuario INT NOT NULL,
@@ -89,4 +89,4 @@ CREATE TABLE preferenciaUsuario
   FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
 );
 
-Insert into usuario (idusuario, primernombre, primerapellido, rol, foto, estado, correo, contrasena) values (1, 'juancho', 'polo', 1, 'url', 1, 'juancho@gmail.com', '12345');
+Insert into usuario (primernombre, primerapellido, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 1, 'url', 1, 'juancho@gmail.com', '12345');
