@@ -17,7 +17,7 @@ CREATE TABLE usuario
 
 CREATE TABLE publicacion
 (
-  tipo INT NOT NULL,
+  tipo VARCHAR(20) NOT NULL,
   idPublicacion INT NOT NULL,
   fecha DATE NOT NULL,
   contenido VARCHAR(1000) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE comentario
 CREATE TABLE reaccionComentario
 (
   idReacciónComentario INT NOT NULL,
-  tipo INT NOT NULL,
+  tipo VARCHAR(20) NOT NULL,
   idComentario INT NOT NULL,
   idUsuario INT NOT NULL,
   PRIMARY KEY (idReacciónComentario),
@@ -56,14 +56,14 @@ CREATE TABLE reaccionComentario
 CREATE TABLE genero
 (
   idGenero INT NOT NULL,
-  tipo INT NOT NULL,
+  tipo VARCHAR(20) NOT NULL,
   PRIMARY KEY (idGenero)
 );
 
 CREATE TABLE reaccionPublicacion
 (
   idReacciónPublicación INT NOT NULL,
-  tipo INT NOT NULL,
+  tipo VARCHAR(20) NOT NULL,
   idPublicacion INT NOT NULL,
   idUsuario INT NOT NULL,
   PRIMARY KEY (idReacciónPublicación),
