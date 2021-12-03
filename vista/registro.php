@@ -18,23 +18,23 @@
 <body>
     <div class="containerPrincipal">
         <div class="containerLogo">
-            <img src="Pictures/butterflyLogo.png">
+            <img src="pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
-        <form action="">
+        <form action="../controlador/accion/act_registrarUsuario.php" method="post">
             <div>
-                <input type="text" id="inputPrimerNombre" placeholder="Primer Nombre">
-                <input type="text" id="inputSegundoNombre" placeholder="Segundo Nombre">
+                <input type="text" id="inputPrimerNombre" placeholder="Primer Nombre" name="primerNombre">
+                <input type="text" id="inputSegundoNombre" placeholder="Segundo Nombre" name="segundoNombre">
             </div>    
             <div>
-                <input type="text" id="inputPrimerApellido" placeholder="Primer Apellido">
-                <input type="text" id="inputSegundoApellido" placeholder="Segundo Apellido">
+                <input type="text" id="inputPrimerApellido" placeholder="Primer Apellido" name="primerApellido">
+                <input type="text" id="inputSegundoApellido" placeholder="Segundo Apellido" name="segundoApellido">
             </div>
             <div>
-                <input type="email" id="inputCorreoElectronico" placeholder="Correo Electrónico">
+                <input type="email" id="inputCorreoElectronico" placeholder="Correo Electrónico" name="correo">
             </div>
             <div>
-                <input type="password" id="inputContraseña" placeholder="Contraseña">
+                <input type="password" id="inputContraseña" placeholder="Contraseña" name="pass">
                 <input type="password" id="inputConfirmarContraseña" placeholder="Confirmar Contraseña">
             </div>
             <button id="buttonSignUp" type="submit">Registrarse</button>

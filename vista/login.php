@@ -20,7 +20,7 @@
     <div class="containerPrincipal">
         <div class="containerLogin">
             <div class="containerLogo">
-                <img src="Pictures/butterflyLogo.png">
+                <img src="pictures/butterflyLogo.png">
                 <p>Macondo</p>
             </div>
             

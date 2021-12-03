@@ -9,13 +9,13 @@
             //Retorna el usuario si lo encontró, de lo contrario retorna null
         return $usuario;
     }
-    /*
-    function registrarUsuario(Usuario $usuario){
-        $dao=new UsuarioDAO();
+    
+    function registrarUsuario(usuario $usuario){
+        $dao=new usuarioDAO();
         $usuario = $dao->registrarUsuario($usuario);
         return $usuario;
     }
-
+/*
     function verUsuarios(){
         $dao=new UsuarioDAO();
         $usuarios = $dao->verUsuarios();

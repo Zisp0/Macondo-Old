@@ -52,29 +52,25 @@
             return $usuario;
         }    
 
-        /*
+        
         public function registrarUsuario(usuario $usuario){
             $data_source = new dataSource();
             
-            $stmt1 = "INSERT INTO usuario VALUES (NULL,:nombre,:correo,:password,:telefono,:fechanac,:sexo,:pesokg,:administrador)"; 
+            $stmt1 = "INSERT INTO usuario (primernombre, segundoNombre, primerapellido, segundoApellido, rol, estado, correo, contrasena) VALUES (:primerNombre, :segundoNombre, :primerapellido, :segundoApellido, 'usuario', 1, :correo, :contrasena)"; 
             
             $resultado = $data_source->ejecutarActualizacion($stmt1, array(
-                ':primerNombre' => $usuario->getNombre(),
-                ':segundoNombre' => $usuario->getCorreo(),
-                ':password' => $usuario->getPassword(),
-                ':telefono'=>$usuario->getTelefono(),
-                ':fechanac'=>$usuario->getFechaNac(),
-                ':sexo'=>$usuario->getSexo(),
-                ':pesokg'=>$usuario->getPesoKg(),
-                ':fechanac'=>$usuario->getFechaNac(),
-                ':sexo'=>$usuario->getSexo(),
-                ':administrador'=>$usuario->esAdministrador()
+                ':primerNombre' => $usuario->getPrimerNombre(),
+                ':segundoNombre' => $usuario->getSegundoNombre(),
+                ':primerapellido' => $usuario->getPrimerApellido(),
+                ':segundoApellido'=>$usuario->getSegundoApellido(),
+                ':correo'=>$usuario->getCorreo(),
+                ':contrasena'=>$usuario->getContrasena()
                 )
             ); 
 
         return $resultado;
         }
-
+/*
         public function verUsuarios(){
             $data_source = new DataSource();
             

@@ -22,16 +22,16 @@
 <body id="fondo">
     <header>
         <div class="containerLogo">
-            <img src="Pictures/butterflyLogo.png">
+            <img src="pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
         <div class="containerBarSearch">
             <input type="text" id="barSearch" placeholder="Buscar en Macondo">
-            <button id="buttonSearch"><img src="../Pictures/iconSearch.png"></button>
+            <button id="buttonSearch"><img src="pictures/iconSearch.png"></button>
         </div>
         <div class="containerOptionsUser">
-            <img src="Pictures/defaultPictureUser.png">
-            <button id="buttonUserOptions"><img src="../Pictures/barUserOptions.png"></button>
+            <img src="pictures/defaultPictureUser.png">
+            <button id="buttonUserOptions"><img src="pictures/barUserOptions.png"></button>
         </div>
     </header>
 
@@ -40,9 +40,9 @@
         <label class="tema" for="check">|||</label>
         <div class="panel">
             <ul>
-                <button onclick="dia();"><img id="dia" src="../Pictures/sun.png"></button>
+                <button onclick="dia();"><img id="dia" src="pictures/sun.png"></button>
                 <label><br><br></label>
-                <button onclick="noche();"><img id="noche" src="../Pictures/moon.png"></button>
+                <button onclick="noche();"><img id="noche" src="pictures/moon.png"></button>
             </ul>
         </div>
     </div>
@@ -50,12 +50,12 @@
     <div class="containerNavigation">
         <nav>
             <ul> 
-                <li><a href="#"><img id="inicio" src="../Pictures/iconCategoryNav/iconHome.png">Inicio</a></li>
-                <li><a href="#"><img id="historias" src="../Pictures/iconCategoryNav/iconHistory.png">Historias</a></li>
-                <li><a href="#"><img id="cuentos" src="../Pictures/iconCategoryNav/iconStories.png">Cuentos</a></li>
-                <li><a href="#"><img id="literatura" src="../Pictures/iconCategoryNav/iconLiterature.png">Literatura</a></li>
-                <li><a href="#"><img id="poesia" src="../Pictures/iconCategoryNav/iconPoetry.png">Poesía</a></li>
-                <li><a href="#"><img id="articulos" src="../Pictures/iconCategoryNav/iconArticles.png">Artículos</a></li>
+                <li><a href="#"><img id="inicio" src="pictures/iconCategoryNav/iconHome.png">Inicio</a></li>
+                <li><a href="#"><img id="historias" src="pictures/iconCategoryNav/iconHistory.png">Historias</a></li>
+                <li><a href="#"><img id="cuentos" src="pictures/iconCategoryNav/iconStories.png">Cuentos</a></li>
+                <li><a href="#"><img id="literatura" src="pictures/iconCategoryNav/iconLiterature.png">Literatura</a></li>
+                <li><a href="#"><img id="poesia" src="pictures/iconCategoryNav/iconPoetry.png">Poesía</a></li>
+                <li><a href="#"><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</a></li>
             </ul>
         </nav> 
     </div>
@@ -64,7 +64,7 @@
         <div class="containerContent">
             <div class="containerInputPost">
                 <div class="containerInputAndImageProfile">                   
-                    <div><img src="Pictures/defaultPictureUser.png"></div>
+                    <div><img src="pictures/defaultPictureUser.png"></div>
                     <textarea id="inputPost"placeholder="¿Qué quieres escribir?"></textarea>
                 </div>
 
