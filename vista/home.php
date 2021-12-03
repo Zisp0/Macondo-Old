@@ -74,62 +74,8 @@
                          
             </div>
 
-            <div class="post">
-                <section>
-                    <h1>El caiman</h1>
-                    <article>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero quaerat fugiat deserunt ad sit soluta quisquam corporis quia distinctio blanditiis tempore, rem error cum consequuntur vel ipsam obcaecati sapiente repellendus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque obcaecati, neque ut nostrum odit recusandae ex cumque repellendus deserunt nam quidem natus tempore at distinctio? Laborum minima repellat quod veritatis?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores! 
-                        voluptate repellendus nemo quo aut, incidunt libero aspernatur. Amet inventore hic qui atque! In eveniet veritatis optio fugit enim?
-                    </article>  
-                </section>
-            </div>
-
-            <div class="post">
-                <section>
-                    <h1>La Resurreción</h1>
-                    <article>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero quaerat fugiat deserunt ad sit soluta quisquam corporis quia distinctio blanditiis tempore, rem error cum consequuntur vel ipsam obcaecati sapiente repellendus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloremque odit voluptatem laboriosam similique fugit alias odio, excepturi provident aliquam eum error reprehenderit qui molestiae sequi aliquid rem magnam volupta
-                    </article>  
-                </section>
-            </div>
-             
-            <div class="post">
-                <section>
-                    <h1>El caiman</h1>
-                    <article>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero quaerat fugiat deserunt ad sit soluta quisquam corporis quia distinctio blanditiis tempore, rem error cum consequuntur vel ipsam obcaecati sapiente repellendus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque obcaecati, neque ut nostrum odit recusandae ex cumque repellendus deserunt nam quidem natus tempore at distinctio? Laborum minima repellat quod veritatis?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque hic facilis perferendis ratione dolorum fuga, officia quasi aperiam voluptas debitis aliquam aspernatur nemo nulla error saepe praesentium! Vero, nesciunt sunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit illum saepe dicta cumque esse laborum nisi qui nesciunt incidunt? Cupiditate sed tempore voluptates. Tempora quidem nisi consequatur et maiores! 
-                        voluptate repellendus nemo quo aut, incidunt libero aspernatur. Amet inventore hic qui atque! In eveniet veritatis optio fugit enim?
-                    </article>  
-                </section>
-            </div>
-
-            <div class="post">
-                <section>
-                    <h1>La Resurreción</h1>
-                    <article>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero quaerat fugiat deserunt ad sit soluta quisquam corporis quia distinctio blanditiis tempore, rem error cum consequuntur vel ipsam obcaecati sapiente repellendus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloremque odit voluptatem laboriosam similique fugit alias odio, excepturi provident aliquam eum error reprehenderit qui molestiae sequi aliquid rem magnam volupta
-                    </article>  
-                </section>
+            <div>
+                
             </div>
 
         </div>
