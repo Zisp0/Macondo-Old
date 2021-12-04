@@ -23,7 +23,7 @@
 <body id="fondo">
     <header>
         <div class="containerLogo">
-            <img src="Pictures/butterflyLogo.png">
+            <img src="pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
         <div class="containerBarSearch">
@@ -31,7 +31,7 @@
             <button id="buttonSearch"><img src="pictures/iconSearch.png"></button>
         </div>
         <div class="containerOptionsUser">
-            <img src="Pictures/defaultPictureUser.png">
+            <img src="pictures/defaultPictureUser.png">
             <button id="buttonUserOptions"><img src="pictures/barUserOptions.png"></button>
         </div>
     </header>
@@ -65,7 +65,7 @@
         <div class="containerContent">
             <div class="containerInputPost">
                 <div class="containerInputAndImageProfile">                   
-                    <div><img src="Pictures/defaultPictureUser.png"></div>
+                    <div><img src="pictures/defaultPictureUser.png"></div>
                     <textarea id="inputPost"placeholder="¿Qué quieres escribir?"></textarea>
                 </div>
 
