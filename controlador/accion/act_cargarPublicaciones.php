@@ -13,7 +13,7 @@
                 
             $resultado .= '
             <div class="post">
-                <article>'.$publicaciones[$indice].'</article>
+                <article>'.$publicaciones[$indice]->getContenido().'</article>
             </div>
             ';
         } 
