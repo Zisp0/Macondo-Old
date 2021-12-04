@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
 ?>
 
 
@@ -22,7 +23,7 @@
 <body id="fondo">
     <header>
         <div class="containerLogo">
-            <img src="pictures/butterflyLogo.png">
+            <img src="Pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
         <div class="containerBarSearch">
@@ -30,7 +31,7 @@
             <button id="buttonSearch"><img src="pictures/iconSearch.png"></button>
         </div>
         <div class="containerOptionsUser">
-            <img src="pictures/defaultPictureUser.png">
+            <img src="Pictures/defaultPictureUser.png">
             <button id="buttonUserOptions"><img src="pictures/barUserOptions.png"></button>
         </div>
     </header>
@@ -64,7 +65,7 @@
         <div class="containerContent">
             <div class="containerInputPost">
                 <div class="containerInputAndImageProfile">                   
-                    <div><img src="pictures/defaultPictureUser.png"></div>
+                    <div><img src="Pictures/defaultPictureUser.png"></div>
                     <textarea id="inputPost"placeholder="¿Qué quieres escribir?"></textarea>
                 </div>
 
@@ -73,11 +74,10 @@
                 </div>
                          
             </div>
-
-            <div>
+            
+            <div id="publicaciones">
                 
             </div>
-
         </div>
 
         <div class=containerTrendings>
@@ -87,7 +87,8 @@
             </aside>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/publicaciones.js"></script>
     <script src="js/temas.js"></script>
 </body>
 </html>
