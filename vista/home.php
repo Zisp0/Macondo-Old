@@ -50,12 +50,12 @@
     <div class="containerNavigation">
         <nav>
             <ul> 
-                <li><a href="#"><img id="inicio" src="pictures/iconCategoryNav/iconHome.png">Inicio</a></li>
-                <li><a href="#"><img id="historias" src="pictures/iconCategoryNav/iconHistory.png">Historias</a></li>
-                <li><a href="#"><img id="cuentos" src="pictures/iconCategoryNav/iconStories.png">Cuentos</a></li>
-                <li><a href="#"><img id="literatura" src="pictures/iconCategoryNav/iconLiterature.png">Literatura</a></li>
-                <li><a href="#"><img id="poesia" src="pictures/iconCategoryNav/iconPoetry.png">Poesía</a></li>
-                <li><a href="#"><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</a></li>
+                <a href="#"><li><img id="inicio" src="pictures/iconCategoryNav/iconHome.png">Inicio</li></a>
+                <a href="#"><li><img id="historias" src="pictures/iconCategoryNav/iconHistory.png">Historias</li></a>
+                <a href="#"><li><img id="cuentos" src="pictures/iconCategoryNav/iconStories.png">Cuentos</li></a>
+                <a href="#"><li><img id="literatura" src="pictures/iconCategoryNav/iconLiterature.png">Literatura</li></a>
+                <a href="#"><li><img id="poesia" src="pictures/iconCategoryNav/iconPoetry.png">Poesía</li></a>
+                <a href="#"><li><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</li></a>
             </ul>
         </nav> 
     </div>
@@ -65,19 +65,13 @@
             <div class="containerInputPost">
                 <div class="containerInputAndImageProfile">                   
                     <div><img src="pictures/defaultPictureUser.png"></div>
-                    <textarea id="inputPost"placeholder="¿Qué quieres escribir?"></textarea>
-                </div>
-
-                <div>
-                    <button id="buttonPublishPost">Publicar</button>
-                </div>
-                         
+                    <button id="buttonInputPost">¿Qué quieres escribir?</button>
+                </div>                
             </div>
 
             <div>
                 
             </div>
-
         </div>
 
         <div class=containerTrendings>

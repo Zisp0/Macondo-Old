@@ -51,7 +51,7 @@ header .containerBarSearch #barSearch{
     border-radius: 40px;
     padding-left:15px ;
     height: 40px;
-    width: 350px;
+    width: 300px;
     margin-right: 5px;
     border: var(--bg-color);
     background-color: var(--bg-color);
@@ -92,19 +92,18 @@ nav{
 
 nav ul{
     width: 100%;
+    margin-left: -40px;
 }
 
 nav ul li{
     list-style: none;
     height: 50px;
-    width: 95%;
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-left: -30px;
-    padding-left: 30px;
 }
 
-nav ul li:hover{
+nav ul a:hover{
     background-color: var(--bg-color);
     border-radius: 40px;
 }
@@ -112,13 +111,20 @@ nav ul li:hover{
 nav ul li img{
     margin-right: 20px;
 }
-nav ul li a{
+
+nav ul a li{
+    margin-left: 40px;
+}
+
+nav ul a{
+    width: 100%;
     font-size: 23px;
     font-family: 'Mitr', sans-serif;
     color: var(--text-color);
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .containerPrincipal{
@@ -126,8 +132,6 @@ nav ul li a{
     margin-top: 72px;
     margin-left: 282px;
 }
-
-
 
 .containerContent .containerInputPost{
     background-color: var(--primary-color);
@@ -137,19 +141,24 @@ nav ul li a{
 
 .containerContent .containerInputPost .containerInputAndImageProfile{
     display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 70px;
 }
 
-.containerContent .containerInputPost #inputPost{
+.containerContent .containerInputPost #buttonInputPost{
     font-size: 20px;
-    padding: 20px;
-    width: 93%;
-    overflow:hidden;
+    margin-left: 20px;
+    width: 80%;
+    height: 48px;
     border: none;
-    resize: none;
-    outline: none;
-    background-color: transparent;
+    border-radius: 40px;
+    background-color: #ecebeb;
 }
 
+.containerContent .containerInputPost #buttonInputPost:hover{
+    background-color: #dbdbdb;
+}
 
 .containerContent .containerInputPost #buttonPublishPost{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
@@ -163,7 +172,6 @@ nav ul li a{
     height: 40px;
     right:0px;
 }
-
 
 .containerContent{
     align-items: flex-start;

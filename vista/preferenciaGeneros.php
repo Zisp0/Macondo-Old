@@ -21,33 +21,41 @@
             <img src="pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
-        <div>
-            <h1>Géneros de Preferencia</h1>
-            <p>Seleccione lo generos literarios de su preferencia o gusto.</p>
+
+        <div class="containerTitulosInputs">
+            <div class="containerTitulos">
+                <h1>Géneros de Preferencia</h1>
+                <p>Seleccione lo generos literarios de su preferencia o gusto.</p>
+            </div>
+            <form action="" method="post">
+                <div>
+                    <p><input type="checkbox" name="" id="">Terror</p>
+                    <p><input type="checkbox" name="" id="">Romance</p>
+                    <p><input type="checkbox" name="" id="">Ciencia Ficción</p>
+                    <p><input type="checkbox" name="" id="">Comedia</p>
+                </div>    
+                
+                <div>
+                    <p><input type="checkbox" name="" id="">Documental</p>
+                    <p><input type="checkbox" name="" id="">Científicos</p>
+                    <p><input type="checkbox" name="" id="">Tecnología</p>
+                    <p><input type="checkbox" name="" id="">Drama</p>
+                </div>    
+
+                <div>
+                    <p><input type="checkbox" name="" id="">Bélico</p>
+                    <p><input type="checkbox" name="" id="">Aventura</p>
+                    <p><input type="checkbox" name="" id="">Mágico</p>
+                    <p><input type="checkbox" name="" id="">Crímenes</p>
+                </div>
+            </form>
+            <div>
+                <button id="buttonEnviarPreferncias">continuar</button>
+                <button id="buttonOmitir">Omitir</button>
+            </div>
+
         </div>
-        <form action="" method="post">
-        <div>
-        <p><input type="checkbox" name="" id="">Terror</p>
-            <p><input type="checkbox" name="" id="">Romance</p>
-            <p><input type="checkbox" name="" id="">Ciencia Ficción</p>
-            <p><input type="checkbox" name="" id="">Comedia</p>
-        </div>    
-        <div>
-            <p><input type="checkbox" name="" id="">Bélico</p>
-            <p><input type="checkbox" name="" id="">Aventura</p>
-            <p><input type="checkbox" name="" id="">Mágico</p>
-            <p><input type="checkbox" name="" id="">Crímenes</p>
-        </div>
-        <div>
-        <p><input type="checkbox" name="" id="">Documental</p>
-            <p><input type="checkbox" name="" id="">Científicos</p>
-            <p><input type="checkbox" name="" id="">Tecnología</p>
-            <p><input type="checkbox" name="" id="">Drama</p>
-        </div>
-            
-        </form>
-        <button id="buttonEnviarPreferncias">continuar</button>
-        <button>Omitir</button>
+        
     </div>
 </body>
 </html>
