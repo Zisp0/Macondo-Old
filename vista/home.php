@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
 ?>
 
 
@@ -68,8 +69,8 @@
                     <button id="buttonInputPost">¿Qué quieres escribir?</button>
                 </div>                
             </div>
-
-            <div>
+            
+            <div id="publicaciones">
                 
             </div>
         </div>
@@ -81,7 +82,8 @@
             </aside>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/publicaciones.js"></script>
     <script src="js/temas.js"></script>
 </body>
 </html>
