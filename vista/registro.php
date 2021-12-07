@@ -37,7 +37,10 @@
                 <input type="password" id="inputContraseña" placeholder="Contraseña" name="pass">
                 <input type="password" id="inputConfirmarContraseña" placeholder="Confirmar Contraseña">
             </div>
-            <button id="buttonSignUp" type="submit">Registrarse</button>
+            <div>
+                <button id="buttonCancelar" type="reset" onclick="location.href='login.php'">Cancelar</button>
+                <button id="buttonSignUp" type="submit">Registrarse</button>
+            </div> 
         </form>
     </div>
 </body>

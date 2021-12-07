@@ -50,8 +50,8 @@
                 </div>
             </form>
             <div>
-                <button id="buttonEnviarPreferncias">continuar</button>
                 <button id="buttonOmitir">Omitir</button>
+                <button id="buttonEnviarPreferncias">continuar</button>
             </div>
 
         </div>

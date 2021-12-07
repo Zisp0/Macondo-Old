@@ -34,7 +34,7 @@
                         <label for="inputPassword" class="labelForInputPassword">Contraseña</label>
                         <input type="password" id="inputPassword" name="pass">  
                     </div>
-                    <a href="#">¿Olvidaste tu contraseña?</a>            
+                    <a href="recuperarContraseña.php">¿Olvidaste tu contraseña?</a>            
                     <button id="buttonLogIn" type="submit">Iniciar Sesión</button>
                 </form>
 

@@ -15,6 +15,7 @@
     <title>Macondo</title>
     <link rel="stylesheet" href="styles/home.css">
     <link rel="shortcut icon" href="pictures/butterflyIcon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
@@ -75,6 +76,33 @@
             </div>
         </div>
 
+        <div class="pop-up">
+            <div class="pop-up-wrap">
+                <div class="containerTituloyBotonCerrar">
+                    <p>Crear publicación</p>
+                    <button id="buttonCerrarModal"><img src="Pictures/iconCerrar.png" alt=""></button>
+                </div>
+                <form action="">
+                    <div>
+                        <input type="text" placeholder="Escriba el título" id="inputTituloPost">
+                        <select name="" id="selectCategoriaPost">
+                            <option disabled selected>Selecciona la categoría</option>
+                            <option value="">Historias</option>
+                            <option value="">Cuentos</option>
+                            <option value="">Literatura</option>
+                            <option value="">Poesía</option>
+                            <option value="">Artículos</option>
+                        </select>
+                    </div>
+                    
+                    <textarea name="" id="inputContenidoPost" placeholder="Escriba el contenido"></textarea>
+                    <button id="buttonPublicarPost">Publicar</button>
+                </form>
+                    
+            </div>
+        </div>
+        
+
         <div class=containerTrendings>
             <aside>
                 <h2>Tendencias</h2>
@@ -83,7 +111,8 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/publicaciones.js"></script>
-    <script src="js/temas.js"></script>
+    <script src="js/home/publicaciones.js"></script>
+    <script src="js/home/temas.js"></script>
+    <script src="js/home/popUp.js"></script>
 </body>
 </html>

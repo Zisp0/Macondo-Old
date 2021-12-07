@@ -38,7 +38,7 @@ form{
 
 input{
     font-size: 20px;
-    border: 2px solid #dbdbdb;
+    border: 1px solid #dbdbdb;
     border-radius: 5px;
     background-color: #fafafa;
     height: 40px;
@@ -67,4 +67,13 @@ div{
     border:0.5px black solid;
     border-radius: 4px;
     font-size: 20px;
+}
+
+#buttonCancelar{
+    width: 150px;
+    height: 40px;
+    border:0.5px black solid;
+    border-radius: 4px;
+    font-size: 20px; 
+    background-color: #ffffff;
 }
