@@ -1,9 +1,8 @@
 $(document).ready(function () {
-    $(".pop-up").hide();
     $("#buttonInputPost").click(function () {
-        $(".pop-up").show();
+        $(".pop-up").css("visibility", "visible");
     });  
     $("#buttonCerrarModal").click(function () {
-        $(".pop-up").hide();
+        $(".pop-up").css("visibility", "hidden");
     });
 });
