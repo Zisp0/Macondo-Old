@@ -13,63 +13,51 @@ $(document).ready(function () {
     });
 
     $("#btnInicio").click(function () {
-        if(tipoPublicacion != "Inicio"){
-            tipoPublicacion = "Inicio";
-            $('#publicaciones').empty();
-            inicio = 0;
-            maximo = false;
-            cargarPublicaciones();
-        }
+        tipoPublicacion = "Inicio";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
     });
 
     $("#btnHistorias").click(function () {
-        if(tipoPublicacion != "Historias"){
-            tipoPublicacion = "Historias";
-            $('#publicaciones').empty();
-            inicio = 0;
-            maximo = false;
-            cargarPublicaciones();
-        }
+        tipoPublicacion = "Historias";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
     });
     
     $("#btnCuentos").click(function () {
-        if(tipoPublicacion != "Cuentos"){
-            tipoPublicacion = "Cuentos";
-            $('#publicaciones').empty();
-            inicio = 0;
-            maximo = false;
-            cargarPublicaciones();
-        }
+        tipoPublicacion = "Cuentos";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
     });
     
     $("#btnLiteratura").click(function () {
-        if(tipoPublicacion != "Literatura"){
-            tipoPublicacion = "Literatura";
-            $('#publicaciones').empty();
-            inicio = 0;
-            maximo = false;
-            cargarPublicaciones();
-        }
+        tipoPublicacion = "Literatura";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
     });
     
     $("#btnPoesia").click(function () {
-        if(tipoPublicacion != "Poesia"){
-            tipoPublicacion = "Poesia";
-            $('#publicaciones').empty();
-            inicio = 0;
-            maximo = false;
-            cargarPublicaciones();
-        }
+        tipoPublicacion = "Poesia";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
     });
     
     $("#btnArticulos").click(function () {
-        if(tipoPublicacion != "Artículos"){
-            tipoPublicacion = "Artículos";
-            $('#publicaciones').empty();
-            inicio = 0;
-            maximo = false;
-            cargarPublicaciones();
-        }
+        tipoPublicacion = "Artículos";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
     });
 
 
