@@ -112,8 +112,8 @@
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/home/publicaciones.js"></script>
-    <script src="js/home/temas.js"></script>
-    <script src="js/home/popUp.js"></script>
+    <script src="js/publicaciones.js"></script>
+    <script src="js/temas.js"></script>
+    <script src="js/popUp.js"></script>
 </body>
 </html>
