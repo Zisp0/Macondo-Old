@@ -1,9 +1,7 @@
 <?php
     session_start();
-    require_once (__DIR__."/../../modelo/dao/dataSource.php");
     require_once (__DIR__."/../mdb/mdbPublicacion.php");
 
-    $conexion = new dataSource();
     $inicio = $_GET['inicio'];
     $publicaciones = cargarPublicaciones($inicio);
         
@@ -13,6 +11,7 @@
                 
             $resultado .= '
             <div class="post">
+                <h3>'.$publicaciones[$indice]->getTitulo().'</h3>
                 <article>'.$publicaciones[$indice]->getContenido().'</article>
             </div>
             ';

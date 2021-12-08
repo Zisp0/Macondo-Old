@@ -19,6 +19,7 @@ CREATE TABLE publicacion
 (
   tipo VARCHAR(20) NOT NULL,
   idPublicacion INT NOT NULL AUTO_INCREMENT,
+  titulo VARCHAR(50) NOT NULL,
   fecha DATE NOT NULL,
   contenido VARCHAR(1000) NOT NULL,
   estado INT NOT NULL,

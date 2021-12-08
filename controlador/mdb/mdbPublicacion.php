@@ -6,4 +6,9 @@
         return $dao->verPublicaciones($inicio);;
     }
 
+    function crearPublicacion($publicacion){
+        $dao=new publicacionDAO();
+        return $dao->crearPublicacion($publicacion);
+    }
+
 ?>

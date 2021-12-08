@@ -52,12 +52,12 @@
     <div class="containerNavigation">
         <nav>
             <ul> 
-                <a href="#"><li><img id="inicio" src="pictures/iconCategoryNav/iconHome.png">Inicio</li></a>
-                <a href="#"><li><img id="historias" src="pictures/iconCategoryNav/iconHistory.png">Historias</li></a>
-                <a href="#"><li><img id="cuentos" src="pictures/iconCategoryNav/iconStories.png">Cuentos</li></a>
-                <a href="#"><li><img id="literatura" src="pictures/iconCategoryNav/iconLiterature.png">Literatura</li></a>
-                <a href="#"><li><img id="poesia" src="pictures/iconCategoryNav/iconPoetry.png">Poesía</li></a>
-                <a href="#"><li><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</li></a>
+                <button><li><img id="inicio" src="pictures/iconCategoryNav/iconHome.png">Inicio</li></button>
+                <button><li><img id="historias" src="pictures/iconCategoryNav/iconHistory.png">Historias</li></button>
+                <button><li><img id="cuentos" src="pictures/iconCategoryNav/iconStories.png">Cuentos</li></button>
+                <button><li><img id="literatura" src="pictures/iconCategoryNav/iconLiterature.png">Literatura</li></button>
+                <button><li><img id="poesia" src="pictures/iconCategoryNav/iconPoetry.png">Poesía</li></button>
+                <button><li><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</li></button>
             </ul>
         </nav> 
     </div>
@@ -82,23 +82,23 @@
                     <p>Crear publicación</p>
                     <button id="buttonCerrarModal"><img src="Pictures/iconCerrar.png" alt=""></button>
                 </div>
-                <form action="">
+
+                <div id="datosPost">
                     <div>
                         <input type="text" placeholder="Escriba el título" id="inputTituloPost">
                         <select name="" id="selectCategoriaPost">
                             <option disabled selected>Selecciona la categoría</option>
-                            <option value="">Historias</option>
-                            <option value="">Cuentos</option>
-                            <option value="">Literatura</option>
-                            <option value="">Poesía</option>
-                            <option value="">Artículos</option>
+                            <option value="Historias">Historias</option>
+                            <option value="Cuentos">Cuentos</option>
+                            <option value="Literatura">Literatura</option>
+                            <option value="Poesía">Poesía</option>
+                            <option value="Artículos">Artículos</option>
                         </select>
                     </div>
-                    
+                        
                     <textarea name="" id="inputContenidoPost" placeholder="Escriba el contenido"></textarea>
                     <button id="buttonPublicarPost">Publicar</button>
-                </form>
-                    
+                </div>
             </div>
         </div>
         
@@ -110,6 +110,7 @@
             </aside>
         </div>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/home/publicaciones.js"></script>
     <script src="js/home/temas.js"></script>

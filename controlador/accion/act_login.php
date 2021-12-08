@@ -19,8 +19,7 @@
             $_SESSION['ID_USUARIO'] = $user->getId();
             $_SESSION['NOMBRE_USUARIO'] = $user->getPrimerNombre();
             
-            header("Location: ../../vista/home.php");
-
+            header("Location: ../../vista/home.php");    
         }else{
             //Si el usuario no existe se vuelve a mostrar el login
             header("Location: ../../vista/login.php");

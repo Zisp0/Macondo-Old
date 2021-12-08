@@ -2,15 +2,17 @@
     class publicacion{
         public $tipo;
         public $idPublicacion;
+        public $titulo;
         public $fecha;
         public $contenido;
         public $estado;
         public $hora;
         public $idUsuario;
 
-        public function __construct($tipo,$idPublicacion,$fecha,$contenido,$estado,$hora,$idUsuario){
+        public function __construct($tipo, $idPublicacion, $titulo, $fecha, $contenido, $estado, $hora, $idUsuario){
             $this->tipo = $tipo;
             $this->idPublicacion = $idPublicacion;
+            $this->titulo = $titulo;
             $this->fecha = $fecha;
             $this->contenido = $contenido;
             $this->estado = $estado;
@@ -25,6 +27,10 @@
 
         public function getIdPublicacion(){
             return $this->idPublicacion;
+        }
+
+        public function getTitulo(){
+            return $this->titulo;
         }
 
         public function getFecha(){
@@ -42,8 +48,8 @@
             return $this->hora;
         }
 
-        public function getId(){
-            return $this->idusuario;
+        public function getIdUsuario(){
+            return $this->idUsuario;
         }
 
         //setter
@@ -54,6 +60,11 @@
 
         public function setIdPubliacacion($idPublicacion){
             $this->iPubicacion = $idPubicacion;
+            return $this;
+        } 
+
+        public function setTitulo($titulo){
+            $this->titulo = $titulo;
             return $this;
         } 
         
