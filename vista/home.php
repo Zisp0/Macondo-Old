@@ -80,7 +80,7 @@
             <div class="pop-up-wrap">
                 <div class="containerTituloyBotonCerrar">
                     <p>Crear publicación</p>
-                    <button id="buttonCerrarModal"><img src="Pictures/iconCerrar.png" alt=""></button>
+                    <button id="buttonCerrarModal"><img src="pictures/iconCerrar.png" alt=""></button>
                 </div>
 
                 <div id="datosPost">
