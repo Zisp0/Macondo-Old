@@ -3,7 +3,13 @@
     require_once (__DIR__."/../mdb/mdbPublicacion.php");
 
     $inicio = $_GET['inicio'];
-    $publicaciones = cargarPublicaciones($inicio);
+    $tipo = $_GET['tipo'];
+
+    if($tipo == "Inicio"){
+        $publicaciones = cargarPublicaciones($inicio);
+    }else{
+        $publicaciones = cargarPublicacionesPorTipo($inicio, $tipo);
+    }
         
     if(count($publicaciones) > 0){
         $resultado = "";

@@ -52,12 +52,12 @@
     <div class="containerNavigation">
         <nav>
             <ul> 
-                <button><li><img id="inicio" src="pictures/iconCategoryNav/iconHome.png">Inicio</li></button>
-                <button><li><img id="historias" src="pictures/iconCategoryNav/iconHistory.png">Historias</li></button>
-                <button><li><img id="cuentos" src="pictures/iconCategoryNav/iconStories.png">Cuentos</li></button>
-                <button><li><img id="literatura" src="pictures/iconCategoryNav/iconLiterature.png">Literatura</li></button>
-                <button><li><img id="poesia" src="pictures/iconCategoryNav/iconPoetry.png">Poesía</li></button>
-                <button><li><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</li></button>
+                <button id="btnInicio"><li><img id="inicio" src="pictures/iconCategoryNav/iconHome.png">Inicio</li></button>
+                <button id="btnHistorias"><li><img id="historias" src="pictures/iconCategoryNav/iconHistory.png">Historias</li></button>
+                <button id="btnCuentos"><li><img id="cuentos" src="pictures/iconCategoryNav/iconStories.png">Cuentos</li></button>
+                <button id="btnLiteratura"><li><img id="literatura" src="pictures/iconCategoryNav/iconLiterature.png">Literatura</li></button>
+                <button id="btnPoesia"><li><img id="poesia" src="pictures/iconCategoryNav/iconPoetry.png">Poesía</li></button>
+                <button id="btnArticulos"><li><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</li></button>
             </ul>
         </nav> 
     </div>

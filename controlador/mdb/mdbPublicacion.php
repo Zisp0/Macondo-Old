@@ -3,7 +3,12 @@
                
     function cargarPublicaciones($inicio){
         $dao=new publicacionDAO();
-        return $dao->verPublicaciones($inicio);;
+        return $dao->verPublicaciones($inicio);
+    }
+
+    function cargarPublicacionesPorTipo($inicio, $tipo){
+        $dao=new publicacionDAO();
+        return $dao->verPublicacionesPorTipo($inicio, $tipo);
     }
 
     function crearPublicacion($publicacion){
