@@ -15,6 +15,8 @@ class dataSource {
             //y el último parámetro es la contraseña del mysql (en este caso no tiene contraseña,
             //por eso se deja declarado así "")
             $this->conexion = new PDO($this->cadenaConexion,"root","");
+            //xampp: macondo root ""
+            //host: id18052349_macondodb id18052349_macondouser E6>Fh!_G%n-IX+r(
 
         } catch (PDOException $ex) {
 

@@ -5,11 +5,62 @@ let maximo = false;
 let tituloPublicacion = "";
 let contenidoPublicacion = "";
 let categoriaPublicacion = "";
+let tipoPublicacion = "Inicio";
 
 $(document).ready(function () {
     $("#buttonPublicarPost").click(function () {
         validarPost();
-    })
+    });
+
+    $("#btnInicio").click(function () {
+        tipoPublicacion = "Inicio";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
+    });
+
+    $("#btnHistorias").click(function () {
+        tipoPublicacion = "Historias";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
+    });
+    
+    $("#btnCuentos").click(function () {
+        tipoPublicacion = "Cuentos";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
+    });
+    
+    $("#btnLiteratura").click(function () {
+        tipoPublicacion = "Literatura";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
+    });
+    
+    $("#btnPoesia").click(function () {
+        tipoPublicacion = "Poesia";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
+    });
+    
+    $("#btnArticulos").click(function () {
+        tipoPublicacion = "Artículos";
+        $('#publicaciones').empty();
+        inicio = 0;
+        maximo = false;
+        cargarPublicaciones();
+    });
+
+
 });
 
 let observador = new IntersectionObserver((entradas, observador) => {
@@ -34,7 +85,8 @@ const cargarPublicaciones = async => {
             metodh: 'POST',
             dataType: 'text',
             data: {
-                inicio: inicio
+                inicio: inicio,
+                tipo: tipoPublicacion
             },
             success: function (respuesta) {
                 if (respuesta == "maximo") {
