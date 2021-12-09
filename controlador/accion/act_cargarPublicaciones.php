@@ -25,13 +25,13 @@
                 <article>'.$publicaciones[$indice]->getContenido().'</article>
                 <div class="containerReactionComment">
                     <div class="containerLike">
-                        <button id="buttonLike"><img src="pictures/reactionPictures.png"/><p>Me gusta</p></button>
+                        <button id="buttonLike"><img src="pictures/likePictures.png"/><p>Me gusta</p></button>
                     </div>
                     <div class="containerDislike">
-                        <button id="buttonDislike"><img src="pictures/reactionPictures.png"/><p>No me gusta</p></button>
+                        <button id="buttonDislike"><img src="pictures/dislikePictures.png"/><p>No me gusta</p></button>
                     </div>
                     <div class="containerComment">
-                        <button id="buttonComment"><img src="pictures/reactionPictures.png"/><p>Comentar</p></button>
+                        <button id="buttonComment"><img src="pictures/commentPictures.png"/><p>Comentar</p></button>
                     </div>
                 </div>
             </div>

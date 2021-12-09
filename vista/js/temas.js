@@ -16,8 +16,8 @@ function dia(){
 
 function noche(){
     var root = document.documentElement;
-    root.style.setProperty('--primary-color', '#474b4e');
-    root.style.setProperty('--bg-color', '#9b9b9b');
+    root.style.setProperty('--primary-color', '#000000');
+    root.style.setProperty('--bg-color', '#2f3336'); //#111111
     root.style.setProperty('--text-color', '#ffffff');
     document.getElementById('inicio').style.filter = "invert(100%)";
     document.getElementById('historias').style.filter = "invert(100%)";
