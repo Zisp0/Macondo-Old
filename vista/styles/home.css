@@ -291,8 +291,8 @@ nav ul button{
 }
 
 .pop-up-wrap {
-    background-color: #ffffff;
-    color: #eeeeee;
+    background-color: var(--primary-color);;
+    color: var(--text-color);
     display: inline;
     width: 600px;
     height: 500px;
@@ -345,6 +345,8 @@ nav ul button{
     border-radius: 5px;
     outline: none;
     padding-left: 10px;
+    background-color: transparent;
+    color: var(--text-color);
 }
 
 #datosPost #selectCategoriaPost{
@@ -355,6 +357,12 @@ nav ul button{
     border: 1px solid #dbdbdb;
     border-radius: 5px;
     outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+#datosPost #selectCategoriaPost option{
+    background-color: var(--primary-color);
 }
 
 #datosPost #inputContenidoPost{
@@ -369,6 +377,7 @@ nav ul button{
     border-radius: 5px;
     margin-bottom: 30px;
     padding: 10px;
+    color: var(--text-color);
 }
 
 #datosPost #buttonPublicarPost{
