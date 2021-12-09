@@ -15,6 +15,12 @@
         $usuario = $dao->registrarUsuario($usuario);
         return $usuario;
     }
+
+    function buscarUsuarioPorId($id){
+        $dao=new usuarioDAO();
+        $usuario = $dao->buscarUsuarioPorId($id);
+        return $usuario;
+    }
 /*
     function verUsuarios(){
         $dao=new UsuarioDAO();

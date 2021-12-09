@@ -33,18 +33,18 @@
                     //Los nombres de los campos corresponden a los nombres que tienen en la 
                     //base de datos, por ejemplo: id, nombre, correo, password, etc.
                     $usuario = new usuario(
-                            $data_table[$indice]["idUsuario"],
-                            $data_table[$indice]["primerNombre"],
-                            $data_table[$indice]["segundoNombre"],
-                            $data_table[$indice]["primerApellido"],
-                            $data_table[$indice]["segundoApellido"],
-                            $data_table[$indice]["seudonimo"],
-                            $data_table[$indice]["rol"],
-                            $data_table[$indice]["foto"],
-                            $data_table[$indice]["estado"],
-                            $data_table[$indice]["correo"],
-                            $data_table[$indice]["contrasena"]
-                            );
+                        $data_table[$indice]["idUsuario"],
+                        $data_table[$indice]["primerNombre"],
+                        $data_table[$indice]["segundoNombre"],
+                        $data_table[$indice]["primerApellido"],
+                        $data_table[$indice]["segundoApellido"],
+                        $data_table[$indice]["seudonimo"],
+                        $data_table[$indice]["rol"],
+                        $data_table[$indice]["foto"],
+                        $data_table[$indice]["estado"],
+                        $data_table[$indice]["correo"],
+                        $data_table[$indice]["contrasena"]
+                    );
                 }
             }
             //se retorna el objeto usuario, retorna null en el caso de que no encuentre el usuario
@@ -69,6 +69,32 @@
             ); 
 
             return $resultado;
+        }
+
+        public function buscarUsuarioPorId($id){
+            $data_source = new DataSource();
+            
+            $data_table = $data_source->ejecutarConsulta("SELECT * FROM usuario WHERE idUsuario = $id", NULL);
+
+            $usuario=null;
+
+            foreach($data_table as $indice => $valor){
+                $usuario = new usuario(
+                    $data_table[$indice]["idUsuario"],
+                    $data_table[$indice]["primerNombre"],
+                    $data_table[$indice]["segundoNombre"],
+                    $data_table[$indice]["primerApellido"],
+                    $data_table[$indice]["segundoApellido"],
+                    $data_table[$indice]["seudonimo"],
+                    $data_table[$indice]["rol"],
+                    $data_table[$indice]["foto"],
+                    $data_table[$indice]["estado"],
+                    $data_table[$indice]["correo"],
+                    $data_table[$indice]["contrasena"]
+                );
+            }
+            
+            return $usuario;
         }
 /*
         public function verUsuarios(){
