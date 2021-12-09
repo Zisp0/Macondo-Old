@@ -1,9 +1,10 @@
 <?php
     session_start();
+    if (!isset($_SESSION['ID_USUARIO'])) {
+        header("Location: ../index.html");
+    }
     
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
 </head>
 
@@ -30,10 +32,6 @@
         <div class="containerBarSearch">
             <input type="text" id="barSearch" placeholder="Buscar en Macondo">
             <button id="buttonSearch"><img src="pictures/iconSearch.png"></button>
-        </div>
-        <div class="containerOptionsUser">
-            <img src="pictures/defaultPictureUser.png">
-            <button id="buttonUserOptions"><img src="pictures/barUserOptions.png"></button>
         </div>
     </header>
 
@@ -60,6 +58,13 @@
                 <button id="btnArticulos"><li><img id="articulos" src="pictures/iconCategoryNav/iconArticles.png">Artículos</li></button>
             </ul>
         </nav> 
+        <div class="containerOptionsUser">
+            <button id="buttonPerfil">
+                <img src="pictures/defaultPictureUser.png">
+                <p>N</p>
+            </button>
+            <button id="buttonUserOptions"><span class="material-icons">expand_more</span></button>
+        </div>
     </div>
     
     <div class="containerPrincipal">
@@ -67,12 +72,21 @@
             <div class="containerInputPost">
                 <div class="containerInputAndImageProfile">                   
                     <div><img src="pictures/defaultPictureUser.png"></div>
-                    <button id="buttonInputPost">¿Qué quieres escribir?</button>
+                    <button id="buttonInputPost"><p>¿Qué quieres escribir?</p></button>
                 </div>                
             </div>
             
             <div id="publicaciones">
                 
+            </div>
+        </div>
+
+        <div class="containerProfile">
+            <div class="containerInfomationUser">
+                
+            </div>
+            <div class="containerPostProfile">
+
             </div>
         </div>
 
@@ -113,6 +127,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/publicaciones.js"></script>
+    <script src="js/perfil.js"></script>
     <script src="js/temas.js"></script>
     <script src="js/popUp.js"></script>
 </body>

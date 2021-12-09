@@ -14,6 +14,8 @@ $(document).ready(function () {
 
     $("#btnInicio").click(function () {
         tipoPublicacion = "Inicio";
+        $(".containerContent").show();
+        $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
         maximo = false;
@@ -22,6 +24,8 @@ $(document).ready(function () {
 
     $("#btnHistorias").click(function () {
         tipoPublicacion = "Historias";
+        $(".containerContent").show();
+        $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
         maximo = false;
@@ -30,6 +34,8 @@ $(document).ready(function () {
     
     $("#btnCuentos").click(function () {
         tipoPublicacion = "Cuentos";
+        $(".containerContent").show();
+        $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
         maximo = false;
@@ -38,6 +44,8 @@ $(document).ready(function () {
     
     $("#btnLiteratura").click(function () {
         tipoPublicacion = "Literatura";
+        $(".containerContent").show();
+        $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
         maximo = false;
@@ -46,6 +54,8 @@ $(document).ready(function () {
     
     $("#btnPoesia").click(function () {
         tipoPublicacion = "Poesia";
+        $(".containerContent").show();
+        $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
         maximo = false;
@@ -54,6 +64,8 @@ $(document).ready(function () {
     
     $("#btnArticulos").click(function () {
         tipoPublicacion = "Artículos";
+        $(".containerContent").show();
+        $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
         maximo = false;

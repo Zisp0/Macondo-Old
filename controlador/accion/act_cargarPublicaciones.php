@@ -24,9 +24,20 @@
                 
             $resultado .= '
             <div class="post">
+<<<<<<< HEAD
+                <div class="containerPicturesNameUserMore">
+                    <div class="containerPicturesName">
+                        <img src="pictures/defaultPictureUser.png">
+                        <p>Nombre User</p>
+                    </div>               
+                    <div class="containerMore">
+                        <button id="buttonMore"><span class="material-icons">more_horiz</span></button>
+                    </div> 
+=======
                 <div class="ContainerPicturesNameUser">
                     <div><img src="pictures/defaultPictureUser.png"></div>
                     <p>'.$usuarios[$indice]->getPrimerNombre().' '.$usuarios[$indice]->getPrimerApellido().'</p>
+>>>>>>> e4f5382153ea2e662ac87eae1f9a683ad4c70009
                 </div>
                 <h3>'.$publicaciones[$indice]->getTitulo().'</h3>
                 <article>'.$publicaciones[$indice]->getContenido().'</article>
