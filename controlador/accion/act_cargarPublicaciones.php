@@ -25,7 +25,7 @@
             $resultado .= '
             <div class="post">
                 <div class="ContainerPicturesNameUser">
-                    <div><img src="pictures/defaultPictureUser.png"></div>               
+                    <div><img src="pictures/defaultPictureUser.png"></div>
                     <p>'.$usuarios[$indice]->getPrimerNombre().' '.$usuarios[$indice]->getPrimerApellido().'</p>
                 </div>
                 <h3>'.$publicaciones[$indice]->getTitulo().'</h3>
