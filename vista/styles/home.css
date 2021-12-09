@@ -299,6 +299,7 @@ nav ul button{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    border: 1px #ffffff solid;
 }
 
 .containerTituloyBotonCerrar{
@@ -363,6 +364,10 @@ nav ul button{
 
 #datosPost #selectCategoriaPost option{
     background-color: var(--primary-color);
+}
+
+#datosPost #selectCategoriaPost option:hover{
+    background-color: var(--bg-color);
 }
 
 #datosPost #inputContenidoPost{
