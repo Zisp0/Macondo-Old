@@ -61,7 +61,7 @@
         <div class="containerOptionsUser">
             <button id="buttonPerfil">
                 <img src="pictures/defaultPictureUser.png">
-                <p>N</p>
+                <p id="nombreUsuario"></p>
             </button>
             <button id="buttonUserOptions"><span class="material-icons">expand_more</span></button>
         </div>

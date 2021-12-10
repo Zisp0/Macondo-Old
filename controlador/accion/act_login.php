@@ -17,7 +17,8 @@
         if($user != null){
             //Si el usuario fue encontrado, se guarda su ID en una sesión con $_SESSION
             $_SESSION['ID_USUARIO'] = $user->getId();
-            $_SESSION['NOMBRE_USUARIO'] = $user->getPrimerNombre();
+            $_SESSION['PRIMER_NOMBRE_USUARIO'] = $user->getPrimerNombre();
+            $_SESSION['PRIMER_APELLIDO_USUARIO'] = $user->getPrimerApellido();
             
             header("Location: ../../vista/home.php");    
         }else{
