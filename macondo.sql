@@ -91,3 +91,15 @@ CREATE TABLE preferenciaUsuario
 );
 
 Insert into usuario (primernombre, primerapellido, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 1, 'url', 1, 'juancho@gmail.com', '12345');
+Insert into genero (tipo) values ('Terror');
+Insert into genero (tipo) values ('Romance');
+Insert into genero (tipo) values ('Ciencia Ficción');
+Insert into genero (tipo) values ('Comedia');
+Insert into genero (tipo) values ('Documental');
+Insert into genero (tipo) values ('Científicos');
+Insert into genero (tipo) values ('Tecnología');
+Insert into genero (tipo) values ('Drama');
+Insert into genero (tipo) values ('Bélico');
+Insert into genero (tipo) values ('Aventura');
+Insert into genero (tipo) values ('Mágico');
+Insert into genero (tipo) values ('Crímenes');

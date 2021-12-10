@@ -16,6 +16,7 @@
         $usuario = new usuario(NULL, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, NULL, 'usuario', NULL, 1, $correo, $contrasena);
         $registro = registrarUsuario($usuario);
         if($registro){
+            $_SESSION['ID_USUARIO'] = $registro;
             header("Location: ../../vista/preferenciaGeneros.php?msg=Se realizo el registro satisfactoriamente");
         } else{
             header("Location: ../../vista/login.php?msg=No se pudo realizar el registro");

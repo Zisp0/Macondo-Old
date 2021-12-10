@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (!isset($_SESSION['ID_USUARIO'])) {
+        header("Location: ../index.html");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,24 +32,24 @@
             </div>
             <form action="" method="post">
                 <div>
-                    <p><input type="checkbox" name="" id="">Terror</p>
-                    <p><input type="checkbox" name="" id="">Romance</p>
-                    <p><input type="checkbox" name="" id="">Ciencia Ficción</p>
-                    <p><input type="checkbox" name="" id="">Comedia</p>
+                    <p><input type="checkbox" value="Terror" id="">Terror</p>
+                    <p><input type="checkbox" value="Romance" id="">Romance</p>
+                    <p><input type="checkbox" value="Ciencia Ficción" id="">Ciencia Ficción</p>
+                    <p><input type="checkbox" value="Comedia" id="">Comedia</p>
                 </div>    
                 
                 <div>
-                    <p><input type="checkbox" name="" id="">Documental</p>
-                    <p><input type="checkbox" name="" id="">Científicos</p>
-                    <p><input type="checkbox" name="" id="">Tecnología</p>
-                    <p><input type="checkbox" name="" id="">Drama</p>
+                    <p><input type="checkbox" value="Documental" id="">Documental</p>
+                    <p><input type="checkbox" value="Científicos" id="">Científicos</p>
+                    <p><input type="checkbox" value="Tecnología" id="">Tecnología</p>
+                    <p><input type="checkbox" value="Drama" id="">Drama</p>
                 </div>    
 
                 <div>
-                    <p><input type="checkbox" name="" id="">Bélico</p>
-                    <p><input type="checkbox" name="" id="">Aventura</p>
-                    <p><input type="checkbox" name="" id="">Mágico</p>
-                    <p><input type="checkbox" name="" id="">Crímenes</p>
+                    <p><input type="checkbox" value="Bélico" id="">Bélico</p>
+                    <p><input type="checkbox" value="Aventura" id="">Aventura</p>
+                    <p><input type="checkbox" value="Mágico" id="">Mágico</p>
+                    <p><input type="checkbox" value="Crímenes" id="">Crímenes</p>
                 </div>
             </form>
             <div>
@@ -55,7 +58,9 @@
             </div>
 
         </div>
-        
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/preferenciaGeneros.js"></script>
 </body>
 </html>

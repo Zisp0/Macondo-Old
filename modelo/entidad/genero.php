@@ -1,16 +1,16 @@
 <?php
-    class comentario{
-        public $genero;
+    class genero{
+        public $idGenero;
         public $tipo;
 
-        public function __construct($genero,$tipo){
-            $this->genero = $genero;
+        public function __construct($idGenero,$tipo){
+            $this->idGenero = $idGenero;
             $this->tipo = $tipo;
         }
         //getter
 
-        public function getGenero(){
-            return $this->genero;
+        public function getIdGenero(){
+            return $this->idGenero;
         }
         public function getTipo(){
             return $this->tipo;
@@ -19,8 +19,8 @@
 
         //setter
 
-         public function setGenero($genero){
-            $this->genero = $genero;
+         public function setIdGenero($idGenero){
+            $this->idGenero = $idGenero;
             return $this;
         }
         public function setTipo($tipo){
