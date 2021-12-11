@@ -82,11 +82,53 @@
         </div>
 
         <div class="containerProfile">
-            <div class="containerInfomationUser">
-                
+            <div class="containerInformationUser">
+                <div class="containerPicturesNamePseudonimo">
+                    <div class="containerPictures">
+                        <img src="pictures/profileDefaultPicture.png" alt="" width="168px" height="168px">
+                    </div>
+                    <div class="containerNamePseudonimo">
+                        <p id="nameUserProfile"></p>
+                        <p id="pseudonimoUserProfile">@Pseudonimo</p>
+                        <button id="buttonEditarPerfil">Editar perfil</button>
+                    </div>
+                </div>
             </div>
             <div class="containerPostProfile">
+                <div class="containerTituloPublicaciones">
+                    <p id="tituloPublicaciones">Mis Publicaciones</p>
+                </div>  
+                <div class="postProfile">
 
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-up-perfil">
+            <div class="pop-up-wrap-perfil">
+                <div class="containerTituloyBotonCerrar">
+                    <p>Editar Perfil</p>
+                    <button id="buttonCerrarModalPerfil"><img src="pictures/iconCerrar.png" alt=""></button>
+                </div>
+
+                <div id="datosPerfil">
+
+                    <div>
+                        <input type="text" id="inputPrimerNombrePerfil" placeholder="Primer Nombre" name="primerNombre">
+                        <input type="text" id="inputSegundoNombrePerfil" placeholder="Segundo Nombre" name="segundoNombre">
+                    </div>    
+                    <div>
+                        <input type="text" id="inputPrimerApellidoPerfil" placeholder="Primer Apellido" name="primerApellido">
+                        <input type="text" id="inputSegundoApellidoPerfil" placeholder="Segundo Apellido" name="segundoApellido">
+                    </div>
+                    <div>
+                        <input type="text" id="inputPseudonimoPerfil" placeholder="Pseudonimo" name="PseudonimoPerfil">
+                    </div>
+                    <div>
+                        <input type="file">
+                    </div>
+                    <button id="buttonSubirCambios">Guardar</button>
+                </div>
             </div>
         </div>
 
@@ -120,7 +162,9 @@
         <div class=containerTrendings>
             <aside>
                 <h2>Tendencias</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magni, consectetur omnis, blanditiis aliquid accusamus nam enim provident corrupti suscipit aut necessitatibus quas praesentium voluptatibus repellendus quae atque fuga temporibus.</p>
+                <div class="trending">
+
+                </div>
             </aside>
         </div>
     </div>

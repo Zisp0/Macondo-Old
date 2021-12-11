@@ -5,15 +5,34 @@ $(document).ready(function(){
         $(".containerProfile").show();
     });
 
-    cargarNombre();
+    //cerrar y abrir modal
+    $("#buttonEditarPerfil").click(function (){
+        $(".pop-up-perfil").css("visibility", "visible");
+    });
+    $("#buttonCerrarModalPerfil").click(function () {
+        $(".pop-up-perfil").css("visibility", "hidden");
+    });
+    cargarPrimerNombre();
+    cargarNombreCompleto();
 });
 
-function cargarNombre() {
+function cargarPrimerNombre() {
     $.ajax({
         url: "../controlador/accion/act_cargarNombreUsuario.php",
         dataType: 'text',
         success: function (respuesta) {
-            document.getElementById("nombreUsuario").innerHTML = respuesta;
+            let primerNombre = respuesta.slice(0, respuesta.indexOf(" "));
+            document.getElementById("nombreUsuario").innerHTML = primerNombre;
+        }
+    });
+}
+
+function cargarNombreCompleto(){
+    $.ajax({
+        url: "../controlador/accion/act_cargarNombreUsuario.php",
+        dataType: 'text',
+        success: function (respuesta) {
+            document.getElementById("nameUserProfile").innerHTML = respuesta;
         }
     });
 }

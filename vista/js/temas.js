@@ -13,6 +13,7 @@ function dia(){
     document.getElementById('noche').style.filter = "invert(0%)";
     document.getElementById('buttonUserOptions').style.filter = "invert(0%)";
     document.getElementById('buttonCerrarModal').style.filter = "invert(0%)";
+    document.getElementById('buttonCerrarModalPerfil').style.filter = "invert(0%)";
 }
 
 function noche(){
@@ -30,4 +31,5 @@ function noche(){
     document.getElementById('noche').style.filter = "invert(100%)";
     document.getElementById('buttonUserOptions').style.filter = "invert(100%)";
     document.getElementById('buttonCerrarModal').style.filter = "invert(100%)";
+    document.getElementById('buttonCerrarModalPerfil').style.filter = "invert(100%)";
 }
