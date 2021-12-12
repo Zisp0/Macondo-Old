@@ -96,6 +96,14 @@
             
             return $usuario;
         }
+
+        public function actualizarUrlFotoPorId($id, $extension){
+            $data_source = new dataSource();
+            $url = 'pictures/fotosPerfil/' . $id . $extension;
+            $stmt1 = "UPDATE usuario SET foto = '$url' WHERE idUsuario = $id"; 
+            
+            $data_source->ejecutarActualizacion($stmt1, array()); 
+        }
 /*
         public function verUsuarios(){
             $data_source = new DataSource();

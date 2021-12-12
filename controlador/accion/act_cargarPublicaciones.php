@@ -29,7 +29,13 @@
             <div class="post">
                 <div class="containerPicturesNameUserMore">
                     <div class="containerPicturesName">
-                        <img src="pictures/defaultPictureUser.png">
+                        <img src="';
+                        if($usuarios[$indice]->getFoto() == NULL){
+                            $resultado .= 'pictures/defaultPictureUser.png';
+                        }else{
+                            $resultado .= $usuarios[$indice]->getFoto();
+                        }
+                        $resultado .= '">
                         <p>'.$usuarios[$indice]->getPrimerNombre().' '.$usuarios[$indice]->getPrimerApellido().'</p>
                     </div>      
                     <div class="containerMore">
@@ -37,23 +43,19 @@
                     </div> 
                 </div>
                 <h3>'.$publicaciones[$indice]->getTitulo().'</h3>
-                <article>'.$publicaciones[$indice]->getContenido().'</article>';
-
-                if($tipo != "Perfil"){
-                    $resultado .= '<div class="containerReactionComment">
-                        <div class="containerLike">
-                            <button id="buttonLike"><img src="pictures/likePictures.png"/><p>Me gusta</p></button>
-                        </div>
-                        <div class="containerDislike">
-                            <button id="buttonDislike"><img src="pictures/dislikePictures.png"/><p>No me gusta</p></button>
-                        </div>
-                        <div class="containerComment">
-                            <button id="buttonComment"><img src="pictures/commentPictures.png"/><p>Comentar</p></button>
-                        </div>
-                    </div>';
-                }
-                
-            $resultado .= '</div>
+                <article>'.$publicaciones[$indice]->getContenido().'</article>
+                <div class="containerReactionComment">
+                    <div class="containerLike">
+                        <button id="buttonLike"><img src="pictures/likePictures.png"/><p>Me gusta</p></button>
+                    </div>
+                    <div class="containerDislike">
+                        <button id="buttonDislike"><img src="pictures/dislikePictures.png"/><p>No me gusta</p></button>
+                    </div>
+                    <div class="containerComment">
+                        <button id="buttonComment"><img src="pictures/commentPictures.png"/><p>Comentar</p></button>
+                        /div>
+                </div>
+            </div>
             ';
         } 
         exit($resultado);

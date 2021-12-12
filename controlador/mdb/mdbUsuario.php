@@ -21,6 +21,11 @@
         $usuario = $dao->buscarUsuarioPorId($id);
         return $usuario;
     }
+
+    function actualizarUrlFotoPorId($id, $extension){
+        $dao=new usuarioDAO();
+        $dao->actualizarUrlFotoPorId($id, $extension);
+    }
 /*
     function verUsuarios(){
         $dao=new UsuarioDAO();
