@@ -15,11 +15,10 @@
          if(file_exists('../../vista/pictures/fotosPerfil/'.$nombreImg)){
             unlink('../../vista/pictures/fotosPerfil/'.$nombreImg);
             move_uploaded_file($_FILES['inputF']['tmp_name'], '../../vista/pictures/fotosPerfil/'.$nombreImg);
-            exit("si");
          }else{
             move_uploaded_file($_FILES['inputF']['tmp_name'], '../../vista/pictures/fotosPerfil/'.$nombreImg);
-            exit("si");
          }
+         exit("si");
       }
    }else{
       exit("no");
