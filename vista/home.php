@@ -85,7 +85,8 @@
             <div class="containerInformationUser">
                 <div class="containerPicturesNamePseudonimo">
                     <div class="containerPictures">
-                        <img src="pictures/profileDefaultPicture.png" alt="" width="168px" height="168px">
+                        <img src="pictures/profileDefaultPicture.png" alt="Mi Foto" width="168px" height="168px" id="miFoto">
+                        <button id="buttonAddFoto"><span class="material-icons">add_a_photo</span></button>
                     </div>
                     <div class="containerNamePseudonimo">
                         <p id="nameUserProfile"></p>
@@ -110,9 +111,7 @@
                     <p>Editar Perfil</p>
                     <button id="buttonCerrarModalPerfil"><img src="pictures/iconCerrar.png" alt=""></button>
                 </div>
-
                 <div id="datosPerfil">
-
                     <div>
                         <input type="text" id="inputPrimerNombrePerfil" placeholder="Primer Nombre" name="primerNombre">
                         <input type="text" id="inputSegundoNombrePerfil" placeholder="Segundo Nombre" name="segundoNombre">
@@ -123,11 +122,32 @@
                     </div>
                     <div>
                         <input type="text" id="inputPseudonimoPerfil" placeholder="Pseudonimo" name="PseudonimoPerfil">
-                    </div>
-                    <div>
-                        <input type="file">
-                    </div>
+    		        </div>
                     <button id="buttonSubirCambios">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pop-up-imagen-perfil">
+            <div class="pop-up-wrap-imagen-perfil">
+                <div class="containerTituloyBotonCerrar">
+                    <p>Cambiar Foto de Perfil</p>
+                    <button id="buttonCerrarModalImagenPerfil"><img src="pictures/iconCerrar.png" alt=""></button>
+                </div>
+
+                <div id="datosImagenPerfil">
+                    <form onsubmit="return false" method="post" enctype="multipart/form-data" id="formImg">
+                        <div class="contenedorEspecial">
+                            <div class="contenedorInputFile">                     
+                                <p>Agregar Foto</p>
+                                <input type="file" id="inputFoto" name="inputF" accept="image/png,image/jpeg">
+                            </div>
+                        </div>
+                        <div id="containerPreviewFoto">
+                            <img src="pictures/profileDefaultPicture.png" alt="" height="168px" id="fotoPerfilEnModal">
+    		            </div>
+                        <button id="buttonSubirCambiosImagen" type="submit">Guardar</button>
+                    </form>
                 </div>
             </div>
         </div>
