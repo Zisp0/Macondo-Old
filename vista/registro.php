@@ -32,6 +32,7 @@
             </div>
             <div>
                 <input type="email" id="inputCorreoElectronico" placeholder="Correo Electrónico" name="correo">
+                <input type="text" id="inputSeudonimo" placeholder="Pseudonimo" mane="seudonimo">
             </div>
             <div>
                 <input type="password" id="inputContraseña" placeholder="Contraseña" name="pass">

@@ -5,14 +5,15 @@ CREATE TABLE usuario
   segundoNombre VARCHAR(20),
   primerApellido VARCHAR(20) NOT NULL,
   segundoApellido VARCHAR(20),
-  seudonimo VARCHAR(20),
+  seudonimo VARCHAR(20) NOT NULL,
   rol VARCHAR(10) NOT NULL,
   foto VARCHAR(100),
   estado INT NOT NULL,
   correo VARCHAR(50) NOT NULL,
   contrasena VARCHAR(30) NOT NULL,
   PRIMARY KEY (idUsuario),
-  UNIQUE (correo)
+  UNIQUE (correo),
+  UNIQUE (seudonimo)
 );
 
 CREATE TABLE publicacion
@@ -90,7 +91,7 @@ CREATE TABLE preferenciaUsuario
   FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
 );
 
-Insert into usuario (primernombre, primerapellido, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 1, 'url', 1, 'juancho@gmail.com', '12345');
+Insert into usuario (primernombre, primerapellido, seudonimo, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 'juancho1', 'user', 'url', 1, 'juancho@gmail.com', '12345');
 Insert into genero (tipo) values ('Terror');
 Insert into genero (tipo) values ('Romance');
 Insert into genero (tipo) values ('Ciencia Ficción');

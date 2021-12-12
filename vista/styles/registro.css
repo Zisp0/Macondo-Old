@@ -51,12 +51,8 @@ div{
     margin-bottom: 20px;
 }
 
-#inputPrimerNombre, #inputPrimerApellido, #inputContraseña{
+#inputPrimerNombre, #inputPrimerApellido, #inputContraseña, #inputCorreoElectronico{
     margin-right: 20px;
-}
-
-#inputCorreoElectronico{
-    width: 450px;
 }
 
 #buttonSignUp{
