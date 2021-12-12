@@ -8,6 +8,9 @@
 
     if($tipo == "Inicio"){
         $publicaciones = cargarPublicaciones($inicio);
+    }else if($tipo == "Perfil"){
+        $idUsuario = $_SESSION['ID_USUARIO'];
+        $publicaciones = cargarPublicacionesPorUsuario($inicio, $idUsuario);
     }else{
         $publicaciones = cargarPublicacionesPorTipo($inicio, $tipo);
     }
@@ -34,19 +37,23 @@
                     </div> 
                 </div>
                 <h3>'.$publicaciones[$indice]->getTitulo().'</h3>
-                <article>'.$publicaciones[$indice]->getContenido().'</article>
-                <div class="containerReactionComment">
-                    <div class="containerLike">
-                        <button id="buttonLike"><img src="pictures/likePictures.png"/><p>Me gusta</p></button>
-                    </div>
-                    <div class="containerDislike">
-                        <button id="buttonDislike"><img src="pictures/dislikePictures.png"/><p>No me gusta</p></button>
-                    </div>
-                    <div class="containerComment">
-                        <button id="buttonComment"><img src="pictures/commentPictures.png"/><p>Comentar</p></button>
-                    </div>
-                </div>
-            </div>
+                <article>'.$publicaciones[$indice]->getContenido().'</article>';
+
+                if($tipo != "Perfil"){
+                    $resultado .= '<div class="containerReactionComment">
+                        <div class="containerLike">
+                            <button id="buttonLike"><img src="pictures/likePictures.png"/><p>Me gusta</p></button>
+                        </div>
+                        <div class="containerDislike">
+                            <button id="buttonDislike"><img src="pictures/dislikePictures.png"/><p>No me gusta</p></button>
+                        </div>
+                        <div class="containerComment">
+                            <button id="buttonComment"><img src="pictures/commentPictures.png"/><p>Comentar</p></button>
+                        </div>
+                    </div>';
+                }
+                
+            $resultado .= '</div>
             ';
         } 
         exit($resultado);

@@ -1,13 +1,14 @@
 $(document).ready(function(){
     $("#buttonPerfil").click(function(){
         $(".containerProfile").show();
-        $(".containerContent").hide();
+        $(".containerInputPost").hide();
     });
 
     //cerrar y abrir modal de editar datos
     $("#buttonEditarPerfil").click(function (){
         $(".pop-up-perfil").css("visibility", "visible");
     });
+    
     $("#buttonCerrarModalPerfil").click(function () {
         $(".pop-up-perfil").css("visibility", "hidden");
     });
@@ -16,9 +17,11 @@ $(document).ready(function(){
     $("#buttonAddFoto").click(function (){
         $(".pop-up-imagen-perfil").css("visibility", "visible");
     });
+
     $("#buttonCerrarModalImagenPerfil").click(function () {
         $(".pop-up-imagen-perfil").css("visibility", "hidden");
     });
+
     cargarPrimerNombre();
     cargarNombreCompleto();
 
@@ -43,7 +46,11 @@ function cargarNombreCompleto(){
         url: "../controlador/accion/act_cargarNombreUsuario.php",
         dataType: 'text',
         success: function (respuesta) {
-            document.getElementById("nameUserProfile").innerHTML = respuesta;
+            let primerNombre = respuesta.slice(0, respuesta.indexOf(" "));
+            let primerApellido = respuesta.slice(respuesta.indexOf(" "), respuesta.lastIndexOf(" "));
+            document.getElementById("nameUserProfile").innerHTML = primerNombre + ' ' + primerApellido;
+            let seudonimo = respuesta.slice(respuesta.lastIndexOf(" ") + 1, respuesta.length);
+            document.getElementById("pseudonimoUserProfile").innerHTML = '@' + seudonimo;
         }
     });
 }

@@ -76,33 +76,31 @@
                 </div>                
             </div>
             
-            <div id="publicaciones">
-                
-            </div>
-        </div>
-
-        <div class="containerProfile">
-            <div class="containerInformationUser">
-                <div class="containerPicturesNamePseudonimo">
-                    <div class="containerPictures">
-                        <img src="pictures/profileDefaultPicture.png" alt="Mi Foto" width="168px" height="168px" id="miFoto">
-                        <button id="buttonAddFoto"><span class="material-icons">add_a_photo</span></button>
-                    </div>
-                    <div class="containerNamePseudonimo">
-                        <p id="nameUserProfile"></p>
-                        <p id="pseudonimoUserProfile">@Pseudonimo</p>
-                        <button id="buttonEditarPerfil">Editar perfil</button>
+            <div class="containerProfile">
+                <div class="containerInformationUser">
+                    <div class="containerPicturesNamePseudonimo">
+                        <div class="containerPictures">
+                            <img src="pictures/profileDefaultPicture.png" alt="Mi Foto" width="168px" height="168px" id="miFoto">
+                            <button id="buttonAddFoto"><span class="material-icons">add_a_photo</span></button>
+                        </div>
+                        <div class="containerNamePseudonimo">
+                            <p id="nameUserProfile"></p>
+                            <p id="pseudonimoUserProfile">@Pseudonimo</p>
+                            <button id="buttonEditarPerfil">Editar perfil</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="containerPostProfile">
-                <div class="containerTituloPublicaciones">
-                    <p id="tituloPublicaciones">Mis Publicaciones</p>
-                </div>  
-                <div class="postProfile">
-
+                <div class="containerPostProfile">
+                    <div class="containerTituloPublicaciones">
+                        <p id="tituloPublicaciones">Mis Publicaciones</p>
+                    </div>  
+                    <div class="postProfile">
+                        
+                        </div>
+                    </div>
                 </div>
-            </div>
+            
+                <div id="publicaciones"></div>
         </div>
 
         <div class="pop-up-perfil">

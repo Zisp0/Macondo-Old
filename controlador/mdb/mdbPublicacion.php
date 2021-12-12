@@ -11,6 +11,11 @@
         return $dao->verPublicacionesPorTipo($inicio, $tipo);
     }
 
+    function cargarPublicacionesPorUsuario($inicio, $idUsuario){
+        $dao=new publicacionDAO();
+        return $dao->verPublicacionesPorUsuario($inicio, $idUsuario);
+    }
+
     function crearPublicacion($publicacion){
         $dao=new publicacionDAO();
         return $dao->crearPublicacion($publicacion);

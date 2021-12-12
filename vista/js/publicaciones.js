@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     $("#btnInicio").click(function () {
         tipoPublicacion = "Inicio";
-        $(".containerContent").show();
+        $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     $("#btnHistorias").click(function () {
         tipoPublicacion = "Historias";
-        $(".containerContent").show();
+        $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
@@ -34,7 +34,7 @@ $(document).ready(function () {
     
     $("#btnCuentos").click(function () {
         tipoPublicacion = "Cuentos";
-        $(".containerContent").show();
+        $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
@@ -44,7 +44,7 @@ $(document).ready(function () {
     
     $("#btnLiteratura").click(function () {
         tipoPublicacion = "Literatura";
-        $(".containerContent").show();
+        $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
@@ -54,7 +54,7 @@ $(document).ready(function () {
     
     $("#btnPoesia").click(function () {
         tipoPublicacion = "Poesia";
-        $(".containerContent").show();
+        $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
@@ -64,7 +64,7 @@ $(document).ready(function () {
     
     $("#btnArticulos").click(function () {
         tipoPublicacion = "Artículos";
-        $(".containerContent").show();
+        $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
         inicio = 0;
@@ -72,7 +72,13 @@ $(document).ready(function () {
         cargarPublicaciones();
     });
 
-
+    $("#buttonPerfil").click(function(){
+        tipoPublicacion = "Perfil";
+        inicio = 0;
+        maximo = false;
+        $('#publicaciones').empty();
+        cargarPublicaciones();
+    });
 });
 
 let observador = new IntersectionObserver((entradas, observador) => {
@@ -162,7 +168,6 @@ function publicarPost() {
             hora: hora
         },
         success: function (respuesta) {
-            console.log(respuesta);
             if(respuesta === "si"){
                 Swal.fire({
                     text: 'Publicado con éxito',

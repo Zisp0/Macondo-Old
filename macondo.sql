@@ -91,7 +91,7 @@ CREATE TABLE preferenciaUsuario
   FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
 );
 
-Insert into usuario (primernombre, primerapellido, seudonimo, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 'juancho1', 'user', 'url', 1, 'juancho@gmail.com', '12345');
+Insert into usuario (primernombre, primerapellido, seudonimo, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 'juancho1', 'user', NULL, 1, 'juancho@gmail.com', '12345');
 Insert into genero (tipo) values ('Terror');
 Insert into genero (tipo) values ('Romance');
 Insert into genero (tipo) values ('Ciencia Ficción');

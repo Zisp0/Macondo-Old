@@ -315,10 +315,10 @@ nav ul button{
 
 .containerProfile{
     display: flex;
-    flex-direction: column;;
-    width: 69%;
+    flex-direction: column;
     min-width: 450px;
     display: none;
+    margin-right: 0px;
 }
 
 .containerProfile .containerInformationUser{
@@ -385,6 +385,7 @@ nav ul button{
 .containerProfile .containerPostProfile{
     background-color: var(--primary-color);
     margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .containerPostProfile .containerTituloPublicaciones{
