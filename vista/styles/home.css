@@ -10,6 +10,7 @@ body{
     height: 100%;
 }
 
+
 header{
     background-color: var(--primary-color);
     width: 100%;
@@ -120,6 +121,7 @@ nav ul button{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: -45px;
 }
 
 .containerNavigation .containerOptionsUser #buttonPerfil:hover{
@@ -138,6 +140,10 @@ nav ul button{
     padding: 15px 20px 15px 20px;
 }
 
+#buttonPerfil img{
+    border-radius: 50%;
+}
+
 .containerOptionsUser #buttonPerfil p{
     font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -145,20 +151,165 @@ nav ul button{
     font-weight: bold;
 }
 
-.containerNavigation .containerOptionsUser #buttonUserOptions{
-    background-color: transparent;
-    border-color: var(--text-color);
-    border: none;
+.container, #buttonOptionUser, .nav{
+    position: absolute;
+}
+
+.container{
+    margin: auto;
+    margin-top: -40px;
+    margin-left: 200px;
+}
+
+#toggle{
+    display: none;
+}
+
+#buttonOptionUser{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 50px;
+    z-index: 999;
+    width: 43px;
+    height: 43px;
+    background: var(--bg-color);
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    color: var(--text-color);
 }
 
-.containerNavigation .containerOptionsUser #buttonUserOptions:hover{
+.nav{
+    transform: translateY(-10%);
+    opacity: 0;
+    top: 13px;
+    left: -50px;
+    transition: all 0.5s ease-in-out;
+    background: var(--primary-color);
+    width: 150px;
+    border-radius: 5px;
+    border: 2px black;
+    transform: translateY(0%);
+    box-shadow: 1px 1px 10px 4px var(--bg-color);
+}
+
+.nav button{
+    text-align: left;
+    align-items: center;
+    display: block;
+    margin:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40px;
+    width: 150px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    color: var(--text-color);
+    background-color: transparent;
+    transition: all 100ms;
+    border: 1px var(--text-color) solid;
+}
+
+.nav #buttonCambiarContraseña{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+}
+
+.nav #buttonCerrarSesion{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: none;
+}
+
+.nav button:hover{
     background-color: var(--bg-color);
-    border-radius: 50px;
+}
+
+#toggle:checked ~ .nav{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+#toggle:checked ~ #buttonOptionUser{
+    transform: rotate(180deg);
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.pop-up-cambiar-contraseña{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.pop-up-wrap-cambiar-contraseña{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: inline;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px #ffffff solid;
+}
+
+.pop-up-wrap-cambiar-contraseña .containerTituloyBotonCerrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.pop-up-wrap-cambiar-contraseña .containerTituloyBotonCerrar p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-right: 75px;
+}
+
+.pop-up-wrap-cambiar-contraseña .datosCambiarContraseña{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.datosCambiarContraseña input{
+    font-size: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    width: 200px;
+    outline: none;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.datosCambiarContraseña #buttonSubirCambiosContraseña{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe000;
+    width: 150px;
+    height: 40px;
+    border:0.5px black solid;
+    border-radius: 4px;
+    margin-top: 15px;
 }
 
 .containerPrincipal{
@@ -178,6 +329,12 @@ nav ul button{
     margin-top: 10px;
     margin-left: 0px;
     height: 70px;
+}
+
+.containerInputAndImageProfile .fotoOpcion img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 }
 
 .containerContent .containerInputPost #buttonInputPost{
@@ -233,8 +390,6 @@ nav ul button{
 .post .containerPicturesNameUserMore .containerPicturesName{
     display: flex;
     align-items: center;
-    
-    overflow: hidden;
 }
 
 .post .containerPicturesNameUserMore p{
@@ -242,6 +397,12 @@ nav ul button{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 15px;
     font-weight: bold;
+}
+
+.post .publi img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
 }
 
 .containerPicturesNameUserMore .containerMore #buttonMore{
@@ -262,6 +423,7 @@ nav ul button{
     margin-top: 5px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 30px;
+    word-break: break-all;
 }
 
 .containerContent h1{
@@ -337,6 +499,10 @@ nav ul button{
     flex-direction: row; 
 }
 
+.containerPicturesNamePseudonimo .fotoPerfil img{
+    border-radius: 50%;
+}
+
 .containerPicturesNamePseudonimo #buttonAddFoto{
     border: 2px solid var(--text-color);
     background-color: var(--primary-color);
@@ -344,8 +510,7 @@ nav ul button{
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    margin-left: 130px;
-    margin-top: -80px;
+    margin-left: -45px;
 }
 
 .containerPicturesNamePseudonimo #buttonAddFoto span{
@@ -591,6 +756,10 @@ nav ul button{
     border: 1px solid #dbdbdb;
 }
 
+#buttonSubirCambiosImagen{
+    margin-top: 45px;
+}
+
 .pop-up {
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -633,7 +802,7 @@ nav ul button{
     margin-right: 130px;
 }
 
-.pop-up-wrap .containerTituloyBotonCerrar #buttonCerrarModal, #buttonCerrarModalPerfil, #buttonCerrarModalImagenPerfil{
+.pop-up-wrap .containerTituloyBotonCerrar #buttonCerrarModal, #buttonCerrarModalPerfil, #buttonCerrarModalImagenPerfil, #buttonCerrarModalCambiarContraseña{
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -762,46 +931,4 @@ nav ul button{
 
 article, h1, h2, h3, p{
     color: var(--text-color);
-}
-
-.containerPicturesName img{
-    height: 40px;
-}
-
-.containerPicturesName .publi{
-    height: 40px;
-    width: 40px;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fotoPerfil{
-    width: 168px;
-    height: 168px;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fotoPerfil img{
-    width: 168px;
-}
-
-.fotoOpcion{
-    height: 45px;
-    width: 45px;
-    overflow: hidden;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fotoOpcion img{
-    height: 45px;
 }

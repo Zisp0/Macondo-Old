@@ -6,6 +6,12 @@ window.onload = function() {
     }
  }
 
+$(document).ready(function(){
+    $('#buttonCerrarSesion').click(function(){
+        localStorage.setItem("temaEscogidoLocal", "dia");
+    });
+});
+
 function dia(){
     localStorage.setItem("temaEscogidoLocal", "dia");
     var root = document.documentElement;
@@ -20,10 +26,10 @@ function dia(){
     document.getElementById('articulos').style.filter = "invert(0%)";
     document.getElementById('dia').style.filter = "invert(0%)";
     document.getElementById('noche').style.filter = "invert(0%)";
-    document.getElementById('buttonUserOptions').style.filter = "invert(0%)";
     document.getElementById('buttonCerrarModal').style.filter = "invert(0%)";
     document.getElementById('buttonCerrarModalPerfil').style.filter = "invert(0%)";
     document.getElementById('buttonCerrarModalImagenPerfil').style.filter = "invert(0%)";
+    document.getElementById('buttonCerrarModalCambiarContraseña').style.filter = "invert(0%)";
 }
 
 function noche(){
@@ -40,8 +46,8 @@ function noche(){
     document.getElementById('dia').style.filter = "invert(100%)";
     document.getElementById('articulos').style.filter = "invert(100%)";
     document.getElementById('noche').style.filter = "invert(100%)";
-    document.getElementById('buttonUserOptions').style.filter = "invert(100%)";
     document.getElementById('buttonCerrarModal').style.filter = "invert(100%)";
     document.getElementById('buttonCerrarModalPerfil').style.filter = "invert(100%)";
     document.getElementById('buttonCerrarModalImagenPerfil').style.filter = "invert(100%)";
+    document.getElementById('buttonCerrarModalCambiarContraseña').style.filter = "invert(100%)";
 }

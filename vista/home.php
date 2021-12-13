@@ -61,14 +61,38 @@
         <div class="containerOptionsUser">
             <button id="buttonPerfil">
                 <div class="fotoOpcion">
-                    <img src="pictures/defaultPictureUser.png" id="fotoUserNav">
+                    <img src="pictures/defaultPictureUser.png" id="fotoUserNav" width="45px" height="45px" height>
                 </div>
                 <p id="nombreUsuario"></p>
             </button>
-            <button id="buttonUserOptions"><span class="material-icons">expand_more</span></button>
+            <div class="container">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" id="buttonOptionUser" class="material-icons">expand_more</label>
+                <div class="nav">
+                    <button id="buttonCambiarContraseña">Cambiar Contraseña</button>
+                    <form action="../controlador/accion/act_cerrarSesion.php" method="post">
+                        <button id="buttonCerrarSesion">Cerrar Sesión</button>
+                    </form>                 
+                </div>
+
+            </div>
         </div>
     </div>
     
+    <div class="pop-up-cambiar-contraseña">
+        <div class="pop-up-wrap-cambiar-contraseña">
+            <div class="containerTituloyBotonCerrar">
+                <p>Cambiar Contraseña</p>
+                <button id="buttonCerrarModalCambiarContraseña"><img src="pictures/iconCerrar.png" alt=""></button>
+            </div>
+            <div class="datosCambiarContraseña">
+                <input type="text" placeholder="Nueva Contraseña">
+                <input type="text" placeholder="Confirmar Contraseña">
+                <button id="buttonSubirCambiosContraseña">Guardar</button>
+            </div>
+        </div>
+    </div>
+
     <div class="containerPrincipal">
         <div class="containerContent">
             <div class="containerInputPost">
@@ -102,11 +126,11 @@
                     </div>  
                     <div class="postProfile">
                         
-                        </div>
                     </div>
                 </div>
+            </div>
             
-                <div id="publicaciones"></div>
+            <div id="publicaciones"></div>
         </div>
 
         <div class="pop-up-perfil">
@@ -198,5 +222,6 @@
     <script src="js/perfil.js"></script>
     <script src="js/temas.js"></script>
     <script src="js/popUp.js"></script>
+    <script src="js/cambiarContraseña.js"></script>
 </body>
 </html>
