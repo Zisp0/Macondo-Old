@@ -331,7 +331,7 @@ nav ul button{
     height: 70px;
 }
 
-.containerInputAndImageProfile .fotoOpcion img{
+.containerInputAndImageProfile .fotoOpcion img, .containerOptionsUser .fotoOpcion{
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -504,13 +504,15 @@ nav ul button{
 }
 
 .containerPicturesNamePseudonimo #buttonAddFoto{
+    position: absolute;
     border: 2px solid var(--text-color);
     background-color: var(--primary-color);
     width: 45px;
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    margin-left: -45px;
+    margin-left: 120px;
+    margin-top: -54px;
 }
 
 .containerPicturesNamePseudonimo #buttonAddFoto span{
@@ -715,6 +717,11 @@ nav ul button{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#datosImagenPerfil img{
+    width: 168px;
+    height: 168px;
 }
 
 .contenedorInputFile{

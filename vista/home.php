@@ -61,7 +61,7 @@
         <div class="containerOptionsUser">
             <button id="buttonPerfil">
                 <div class="fotoOpcion">
-                    <img src="pictures/defaultPictureUser.png" id="fotoUserNav" width="45px" height="45px" height>
+                    <img src="pictures/defaultPictureUser.png" id="fotoUserNav" width="45px" height="45px">
                 </div>
                 <p id="nombreUsuario"></p>
             </button>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                         <div id="containerPreviewFoto">
-                            <img src="pictures/profileDefaultPicture.png" alt="" height="168px" id="fotoPerfilEnModal">
+                            <img src="pictures/profileDefaultPicture.png" alt="" width="168px" height="168px" id="fotoPerfilEnModal">
     		            </div>
                         <button id="buttonSubirCambiosImagen" type="submit">Guardar</button>
                     </form>
