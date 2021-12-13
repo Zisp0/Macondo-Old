@@ -123,6 +123,11 @@ function subirImagen(){
                     icon: 'success'
                 })
                 cargarFotosUsuario();
+                tipoPublicacion = "Perfil";
+                inicio = 0;
+                maximo = false;
+                $('#publicaciones').empty();
+                cargarPublicaciones();
                 $(".pop-up-imagen-perfil").css("visibility", "hidden");
             }else if(respuesta == "no"){
                 Swal.fire({
