@@ -21,7 +21,7 @@
             <img src="pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
-        <form action="../controlador/accion/act_registrarUsuario.php" method="post">
+        <form action="../controlador/accion/act_registrarUsuario.php" method="POST">
             <div>
                 <input type="text" id="inputPrimerNombre" placeholder="Primer Nombre" name="primerNombre">
                 <input type="text" id="inputSegundoNombre" placeholder="Segundo Nombre" name="segundoNombre">
@@ -32,7 +32,7 @@
             </div>
             <div>
                 <input type="email" id="inputCorreoElectronico" placeholder="Correo Electrónico" name="correo">
-                <input type="text" id="inputSeudonimo" placeholder="Pseudonimo" mane="seudonimo">
+                <input type="text" id="inputSeudonimo" placeholder="Seudonimo" name="seudonimo">
             </div>
             <div>
                 <input type="password" id="inputContraseña" placeholder="Contraseña" name="pass">

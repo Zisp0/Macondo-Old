@@ -56,13 +56,14 @@
         public function registrarUsuario(usuario $usuario){
             $data_source = new dataSource();
             
-            $stmt1 = "INSERT INTO usuario (primernombre, segundoNombre, primerapellido, segundoApellido, rol, estado, correo, contrasena) VALUES (:primerNombre, :segundoNombre, :primerapellido, :segundoApellido, 'usuario', 1, :correo, :contrasena)"; 
+            $stmt1 = "INSERT INTO usuario (primernombre, segundoNombre, primerapellido, segundoApellido, seudonimo, rol, estado, correo, contrasena) VALUES (:primerNombre, :segundoNombre, :primerapellido, :segundoApellido, :seudonimo, 'user', 1, :correo, :contrasena)"; 
             
             $resultado = $data_source->ejecutarActualizacion($stmt1, array(
                 ':primerNombre' => $usuario->getPrimerNombre(),
                 ':segundoNombre' => $usuario->getSegundoNombre(),
                 ':primerapellido' => $usuario->getPrimerApellido(),
                 ':segundoApellido'=>$usuario->getSegundoApellido(),
+                ':seudonimo'=>$usuario->getSeudonimo(),
                 ':correo'=>$usuario->getCorreo(),
                 ':contrasena'=>$usuario->getContrasena()
                 )
