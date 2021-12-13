@@ -122,6 +122,7 @@ function subirImagen(){
                     text: 'Imagen subida correctamente',
                     icon: 'success'
                 })
+                cargarFotosUsuario();
                 $(".pop-up-imagen-perfil").css("visibility", "hidden");
             }else if(respuesta == "no"){
                 Swal.fire({
