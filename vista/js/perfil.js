@@ -24,6 +24,7 @@ $(document).ready(function(){
 
     cargarPrimerNombre();
     cargarNombreCompleto();
+    cargarFotosUsuario();
 
     $("#buttonSubirCambiosImagen").click(function(){
         subirImagen();
@@ -51,6 +52,20 @@ function cargarNombreCompleto(){
             document.getElementById("nameUserProfile").innerHTML = primerNombre + ' ' + primerApellido;
             let seudonimo = respuesta.slice(respuesta.lastIndexOf(" ") + 1, respuesta.length);
             document.getElementById("pseudonimoUserProfile").innerHTML = '@' + seudonimo;
+        }
+    });
+}
+
+function cargarFotosUsuario() {
+    $.ajax({
+        url: "../controlador/accion/act_cargarFotosUsuario.php",
+        dataType: 'text',
+        success: function (respuesta) {
+            if(respuesta != "no"){
+                document.getElementById("miFoto").src = respuesta;
+                document.getElementById("fotoUserNav").src = respuesta;
+                document.getElementById("fotoUserPubli").src = respuesta;
+            }
         }
     });
 }

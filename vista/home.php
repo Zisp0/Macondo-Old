@@ -60,7 +60,9 @@
         </nav> 
         <div class="containerOptionsUser">
             <button id="buttonPerfil">
-                <img src="pictures/defaultPictureUser.png">
+                <div class="fotoOpcion">
+                    <img src="pictures/defaultPictureUser.png" id="fotoUserNav">
+                </div>
                 <p id="nombreUsuario"></p>
             </button>
             <button id="buttonUserOptions"><span class="material-icons">expand_more</span></button>
@@ -70,8 +72,10 @@
     <div class="containerPrincipal">
         <div class="containerContent">
             <div class="containerInputPost">
-                <div class="containerInputAndImageProfile">                   
-                    <div><img src="pictures/defaultPictureUser.png"></div>
+                <div class="containerInputAndImageProfile">
+                    <div class="fotoOpcion">
+                        <img src="pictures/defaultPictureUser.png" id="fotoUserPubli">
+                    </div>                       
                     <button id="buttonInputPost"><p>¿Qué quieres escribir?</p></button>
                 </div>                
             </div>
@@ -80,7 +84,9 @@
                 <div class="containerInformationUser">
                     <div class="containerPicturesNamePseudonimo">
                         <div class="containerPictures">
-                            <img src="pictures/profileDefaultPicture.png" alt="Mi Foto" width="168px" height="168px" id="miFoto">
+                            <div class="fotoPerfil">
+                                <img src="pictures/profileDefaultPicture.png" alt="Mi Foto" width="168px" height="168px" id="miFoto">
+                            </div>
                             <button id="buttonAddFoto"><span class="material-icons">add_a_photo</span></button>
                         </div>
                         <div class="containerNamePseudonimo">

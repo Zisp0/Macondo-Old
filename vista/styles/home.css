@@ -233,6 +233,8 @@ nav ul button{
 .post .containerPicturesNameUserMore .containerPicturesName{
     display: flex;
     align-items: center;
+    
+    overflow: hidden;
 }
 
 .post .containerPicturesNameUserMore p{
@@ -342,7 +344,8 @@ nav ul button{
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    margin-left: -45px;
+    margin-left: 130px;
+    margin-top: -80px;
 }
 
 .containerPicturesNamePseudonimo #buttonAddFoto span{
@@ -759,4 +762,46 @@ nav ul button{
 
 article, h1, h2, h3, p{
     color: var(--text-color);
+}
+
+.containerPicturesName img{
+    height: 40px;
+}
+
+.containerPicturesName .publi{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotoPerfil{
+    width: 168px;
+    height: 168px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotoPerfil img{
+    width: 168px;
+}
+
+.fotoOpcion{
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotoOpcion img{
+    height: 45px;
 }

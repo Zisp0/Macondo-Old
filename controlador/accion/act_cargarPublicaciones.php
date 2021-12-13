@@ -29,13 +29,15 @@
             <div class="post">
                 <div class="containerPicturesNameUserMore">
                     <div class="containerPicturesName">
-                        <img src="';
-                        if($usuarios[$indice]->getFoto() == NULL){
-                            $resultado .= 'pictures/defaultPictureUser.png';
-                        }else{
-                            $resultado .= $usuarios[$indice]->getFoto();
-                        }
-                        $resultado .= '">
+                        <div class="publi">
+                            <img src="';
+                            if($usuarios[$indice]->getFoto() == NULL){
+                                $resultado .= 'pictures/defaultPictureUser.png';
+                            }else{
+                                $resultado .= $usuarios[$indice]->getFoto();
+                            }
+                            $resultado .= '">
+                        </div>
                         <p>'.$usuarios[$indice]->getPrimerNombre().' '.$usuarios[$indice]->getPrimerApellido().'</p>
                     </div>      
                     <div class="containerMore">
@@ -53,7 +55,7 @@
                     </div>
                     <div class="containerComment">
                         <button id="buttonComment"><img src="pictures/commentPictures.png"/><p>Comentar</p></button>
-                        /div>
+                    </div>
                 </div>
             </div>
             ';
