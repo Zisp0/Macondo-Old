@@ -43,7 +43,7 @@ header p{
 .containerNavigation{
     background-color: var(--primary-color);
     position: fixed;
-    top: 72px;
+    top: 70px;
     left: 0;
     height: 100%;
     width: 280px;
@@ -69,8 +69,11 @@ nav ul li{
 
 nav ul button:hover{
     background-color: var(--bg-color);
-    border-radius: 40px;
     cursor: pointer;
+}
+
+nav ul button:focus{
+    outline: none;
 }
 
 nav ul li span{
@@ -82,7 +85,7 @@ nav ul button li{
 }
 
 nav ul button{
-    width: 100%;
+    width: 280px;
     font-size: 23px;
     font-family: 'Mitr', sans-serif;
     color: var(--text-color);
@@ -92,6 +95,7 @@ nav ul button{
     background-color: transparent;
     border: none;
     text-align: left;
+    border-radius: 40px;
 }
 
 .containerNavigation .containerOptionsUser{
@@ -123,11 +127,11 @@ nav ul button{
     font-weight: bold;
 }
 
-.container, #buttonOptionUser, .nav{
+.containerB, #buttonOptionUser, .nav{
     position: absolute;
 }
 
-.container{
+.containerB{
     margin: auto;
     margin-top: -40px;
     margin-left: 200px;
@@ -294,13 +298,13 @@ nav ul button{
 
 .containerContent{
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     width: auto;
     height: auto;
-    min-width: 450px;
+    min-width: 500px;
     background-color: transparent;
-    margin-top: 72px;
+    margin-top: 70px;
     margin-left: 282px;
 }
 
@@ -318,6 +322,57 @@ h2{
     font-size: 40px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--text-color);
+}
+
+.container{
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.row{
+    width: 100%;
+    color: var(--text-color);
+}
+
+.row select{
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.row select:focus{
+    background-color: var(--primary-color);
+}
+
+.row select option{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.row input{
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.row input:focus{
+    background-color: var(--primary-color);
+}
+
+.row a{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#example{
+    width: 100%;
+    background-color: var();
+}
+
+th, td{
+    color: var(--text-color);
+}
+
+table tbody tr:nth-child(odd){
+    background-color: var(red);
 }
 
 .menuTema{
@@ -357,6 +412,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     transition: right 0.5s;
 }
 
