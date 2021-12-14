@@ -173,6 +173,10 @@ function publicarPost() {
                     text: 'Publicado con éxito',
                     icon: 'success'
                 })
+                $('#publicaciones').empty();
+                inicio = 0;
+                maximo = false;
+                cargarPublicaciones();
             }else{
                 Swal.fire({
                     text: 'Hubo un error en la publicación',
