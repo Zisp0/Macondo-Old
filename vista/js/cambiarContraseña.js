@@ -46,6 +46,31 @@ $('#buttonSubirCambiosContraseña').click(function(){
 
 function cambiarContra(){
     $.ajax({
-        url:3
+        url: "../controlador/accion/act_ActualizarContrasena.php",
+        method: 'POST',
+        dataType: 'text',
+        data: {
+            contrasenaActual: $("#inputContraActual").val(),
+            contrasenaNueva: $("#inputContraNueva").val()
+        },
+        success: function (resultado) {
+            console.log(resultado);
+            if(resultado == "si"){
+                Swal.fire({
+                    text: 'Se ha actualizado su contraseña',
+                    icon: 'success'
+                })
+            }else if(resultado == "error"){
+                Swal.fire({
+                    text: 'Su contraseña actual no es la digitada',
+                    icon: 'error'
+                })
+            }else{
+                Swal.fire({
+                    text: 'Hubo un error al momento de atualizar',
+                    icon: 'error'
+                })
+            }
+        }
     })
 }
