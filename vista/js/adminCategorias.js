@@ -1,11 +1,29 @@
 $('#buttonUsuarios').click(function () {
     $('#title').text("Usuarios");
+    $('#col1').text('Id');
+    $('#col2').text('Nombre');
+    $('#col3').text('Apellidos');
+    $('#col4').text('Seudonimo');
+    $('#col5').text('Email');
+    $('#col6').text('Rol');
 });
 $('#buttonPublicaciones').click(function () {
     $('#title').text("Publicaciones");
+    $('#col1').text('Id');
+    $('#col2').text('Usuario');
+    $('#col3').text('Tipo');
+    $('#col4').text('Titulo');
+    $('#col5').text('Contenido');
+    $('#col6').text('Fecha');
 });
 $('#buttonComentarios').click(function () {
     $('#title').text("Comentarios");
+    $('#col1').text('Id');
+    $('#col2').text('Usuario');
+    $('#col3').text('Publicacion');
+    $('#col4').text('Contenido');
+    $('#col5').text('fecha');
+    $('#col6').text('hora');
 });
 
 //$('#example').DataTable(); //Para inicializar datatables de la manera más simple

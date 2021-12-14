@@ -304,7 +304,7 @@ nav ul button{
     width: auto;
     height: auto;
     min-width: 500px;
-    background-color: transparent;
+    background-color: var(--primary-color);
     margin-top: 70px;
     margin-left: 282px;
 }
@@ -326,6 +326,7 @@ h2{
 }
 
 .container{
+    display: contents;
     width: 100%;
     background-color: var(--primary-color);
 }
@@ -347,6 +348,11 @@ h2{
 .row select option{
     background-color: var(--primary-color);
     color: var(--text-color);
+}
+
+#contenedorTabla{
+    width: 100%;
+    padding: 0px 50px 0px 10px;
 }
 
 .row input{
@@ -377,6 +383,19 @@ th, td{
 
 table tbody tr:nth-child(odd){
     background-color: var(red);
+}
+
+table .buttonTable{
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px var(--text-color) solid;
+    width: 48px;
+    height: 48px;
+}
+
+table .buttonTable span{
+    display: contents;
+    color: var(--text-color);
 }
 
 .menuTema{

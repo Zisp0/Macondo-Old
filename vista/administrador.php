@@ -107,44 +107,48 @@
         
          <!--Ejemplo tabla con DataTables-->
         <div class="container">
-            <div class="row">
+            <div class="row" id="contenedorTabla">
                 <div class="col-lg-12">
                     <div class="table-responsive">        
                         <table id="example" class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Nombres</th>
-                                <th>Apellidos</th>
-                                <th>Edad</th>
-                                <th>Año de Ingreso</th>
-                                <th>Salario</th>
+                                <th id="col1">Id</th>
+                                <th id="col2">Nombres</th>
+                                <th id="col3">Apellidos</th>
+                                <th id="col4">Seudonimo</th>
+                                <th id="col5">Email</th>
+                                <th id="col6">Rol</th>
+                                <th id="col7">Estado</th>
+                                <th id="col8">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Arquitecto</td>
+                                <td>Arquitecto faallllffffffffffff</td>
                                 <td>Edinburgh</td>
                                 <td>61</td>
                                 <td>2011/04/25</td>
                                 <td>$320,800</td>
+                                <td>rr</td>
+                                <td>
+                                    <button class="buttonTable"><span class="material-icons">delete</span></button>
+                                    <button class="buttonTable"><span class="material-icons">edit</span></button>
+                                </td>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td>Contador</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011/07/25</td>
-                                <td>$170,750</td>
-                            </tr>                
-                            <tr>
-                                <td>3</td>
-                                <td>Senior Javascript</td>
+                                <td>1</td>
+                                <td>Arquitecto faallllffffffffffff</td>
                                 <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>2012/03/29</td>
-                                <td>$433,060</td>
+                                <td>61</td>
+                                <td>2011/04/25</td>
+                                <td>$320,800</td>
+                                <td>rr</td>
+                                <td>
+                                    <button class="buttonTable"><span class="material-icons">delete</span></button>
+                                    <button class="buttonTable"><span class="material-icons">edit</span></button>
+                                </td>
                             </tr>
                         </tbody>        
                         </table>                  
