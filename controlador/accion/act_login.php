@@ -21,7 +21,13 @@
             $_SESSION['PRIMER_APELLIDO_USUARIO'] = $user->getPrimerApellido();
             $_SESSION['SEUDONIMO_USUARIO'] = $user->getSeudonimo();
             
-            header("Location: ../../vista/home.php");    
+            if ($user->getRol() == 'user') {
+                header("Location: ../../vista/home.php"); 
+            } else if(($user->getRol() == 'admin')){
+                header("Location: ../../vista/administrador.php");
+            }else{
+                header("Location: ../../vista/login.php");
+            }
         }else{
             //Si el usuario no existe se vuelve a mostrar el login
             header("Location: ../../vista/login.php");

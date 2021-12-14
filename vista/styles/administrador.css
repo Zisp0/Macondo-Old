@@ -4,6 +4,10 @@
     --text-color: #000000;
 }
 
+p{
+    color: var(--text-color);
+}
+
 body{
     margin: 0;
     background-color: var(--bg-color);
@@ -20,6 +24,7 @@ header{
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px inset var(--bg-color);
+    margin-bottom: 70px;
 }
 
 header .containerLogo{
@@ -33,6 +38,286 @@ header p{
     margin-left:10px;
     font-family: 'Mitr', sans-serif;
     font-size: 40px;
+}
+
+.containerNavigation{
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 72px;
+    left: 0;
+    height: 100%;
+    width: 280px;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+}
+
+nav ul{
+    width: 100%;
+    margin-left: -40px;
+}
+
+nav ul li{
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav ul button:hover{
+    background-color: var(--bg-color);
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+nav ul li span{
+    margin-right: 20px;
+}
+
+nav ul button li{
+    margin-left: 40px;
+}
+
+nav ul button{
+    width: 100%;
+    font-size: 23px;
+    font-family: 'Mitr', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+}
+
+.containerNavigation .containerOptionsUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -45px;
+}
+
+.containerOptionsUser #buttonPerfil{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    padding: 15px 20px 15px 20px;
+}
+
+#buttonPerfil img{
+    border-radius: 50%;
+}
+
+.containerOptionsUser #buttonPerfil p{
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.container, #buttonOptionUser, .nav{
+    position: absolute;
+}
+
+.container{
+    margin: auto;
+    margin-top: -40px;
+    margin-left: 200px;
+}
+
+#toggle{
+    display: none;
+}
+
+#buttonOptionUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    width: 43px;
+    height: 43px;
+    background: var(--bg-color);
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.nav{
+    transform: translateY(-10%);
+    opacity: 0;
+    top: 13px;
+    left: -50px;
+    transition: all 0.5s ease-in-out;
+    background: var(--primary-color);
+    width: 150px;
+    border-radius: 5px;
+    border: 2px black;
+    transform: translateY(0%);
+    box-shadow: 1px 1px 10px 4px var(--bg-color);
+}
+
+.nav button{
+    text-align: left;
+    align-items: center;
+    display: block;
+    margin:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40px;
+    width: 150px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    color: var(--text-color);
+    background-color: transparent;
+    transition: all 100ms;
+    border: 1px var(--text-color) solid;
+}
+
+.nav #buttonCambiarContraseña{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+}
+
+.nav #buttonCerrarSesion{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: none;
+}
+
+.nav button:hover{
+    background-color: var(--bg-color);
+}
+
+#toggle:checked ~ .nav{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+#toggle:checked ~ #buttonOptionUser{
+    transform: rotate(180deg);
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.pop-up-cambiar-contraseña{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.pop-up-wrap-cambiar-contraseña{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: inline;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px #ffffff solid;
+}
+
+.pop-up-wrap-cambiar-contraseña .containerTituloyBotonCerrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.pop-up-wrap-cambiar-contraseña .containerTituloyBotonCerrar p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-right: 75px;
+}
+
+.pop-up-wrap-cambiar-contraseña .datosCambiarContraseña{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.datosCambiarContraseña input{
+    font-size: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: transparent;
+    height: 40px;
+    padding: 0 10px 0 10px;
+    width: 200px;
+    outline: none;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.datosCambiarContraseña #buttonSubirCambiosContraseña{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe000;
+    width: 150px;
+    height: 40px;
+    border:0.5px black solid;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+#buttonCerrarModalCambiarContraseña{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 40px;
+    border: none;
+}
+
+.containerContent{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    min-width: 450px;
+    background-color: transparent;
+    margin-top: 72px;
+    margin-left: 282px;
+}
+
+.containerContent .containerTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+}
+
+h2{
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
 }
 
 .menuTema{
