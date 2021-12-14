@@ -86,6 +86,7 @@
                 <button id="buttonCerrarModalCambiarContraseña"><img src="pictures/iconCerrar.png" alt=""></button>
             </div>
             <div class="datosCambiarContraseña">
+                <input type="text" placeholder="Contraseña actual">
                 <input type="text" placeholder="Nueva Contraseña">
                 <input type="text" placeholder="Confirmar Contraseña">
                 <button id="buttonSubirCambiosContraseña">Guardar</button>

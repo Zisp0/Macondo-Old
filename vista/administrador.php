@@ -88,10 +88,11 @@
     <div class="pop-up-cambiar-contraseña">
         <div class="pop-up-wrap-cambiar-contraseña">
             <div class="containerTituloyBotonCerrar">
-                <p>Cambiar Contraseña</p>
+                <h2>Cambiar Contraseña</h2>
                 <button id="buttonCerrarModalCambiarContraseña"><img src="pictures/iconCerrar.png" alt=""></button>
             </div>
             <div class="datosCambiarContraseña">
+                <input type="text" placeholder="Contraseña Actual">
                 <input type="text" placeholder="Nueva Contraseña">
                 <input type="text" placeholder="Confirmar Contraseña">
                 <button id="buttonSubirCambiosContraseña">Guardar</button>
