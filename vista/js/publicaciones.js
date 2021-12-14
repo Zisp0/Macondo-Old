@@ -133,16 +133,19 @@ function validarPost() {
     
     if(tituloPublicacion === ""){
         Swal.fire({
+            title:'Ingrese el título',
             text: 'Por favor ingrese un título',
             icon: 'warning'
         })
     }else if(contenidoPublicacion === ""){
         Swal.fire({
+            title:'Ingrese el contenido',
             text: 'Por favor ingrese el contenido',
             icon: 'warning'
         })
     }else if(categoriaPublicacion === null){
         Swal.fire({
+            title:'Selecciones la categoría',
             text: 'Por favor seleccione la categoría',
             icon: 'warning'
         })
@@ -170,6 +173,7 @@ function publicarPost() {
         success: function (respuesta) {
             if(respuesta === "si"){
                 Swal.fire({
+                    title:'Publicado',
                     text: 'Publicado con éxito',
                     icon: 'success'
                 })
@@ -179,6 +183,7 @@ function publicarPost() {
                 cargarPublicaciones();
             }else{
                 Swal.fire({
+                    title:'Error en la publicacaión',
                     text: 'Hubo un error en la publicación',
                     icon: 'error'
                 })

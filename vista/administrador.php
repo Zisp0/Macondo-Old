@@ -92,9 +92,9 @@
                 <button id="buttonCerrarModalCambiarContraseña"><img src="pictures/iconCerrar.png" alt=""></button>
             </div>
             <div class="datosCambiarContraseña">
-                <input type="text" placeholder="Contraseña Actual">
-                <input type="text" placeholder="Nueva Contraseña">
-                <input type="text" placeholder="Confirmar Contraseña">
+                <input id="inputContraActual" type="text" placeholder="Contraseña Actual">
+                <input id="inputContraNueva" type="text" placeholder="Nueva Contraseña">
+                <input id="inputContraConfirmar" type="text" placeholder="Confirmar Contraseña">
                 <button id="buttonSubirCambiosContraseña">Guardar</button>
             </div>
         </div>
@@ -165,6 +165,7 @@
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="js/lib/jquery/jquery-3.3.1.min.js"></script>
@@ -173,7 +174,6 @@
       
     <!-- datatables JS -->
     <script type="text/javascript" src="js/lib/datatables/datatables.min.js"></script> 
-
     <script src="js/adminTemas.js"></script>
     <script src="js/cambiarContraseña.js"></script>
     <script src="js/adminCategorias.js"></script>
