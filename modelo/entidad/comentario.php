@@ -21,7 +21,7 @@
         //getter
 
         public function getIdComentario(){
-            return $this->idUsuario;
+            return $this->idComentario;
         }
         public function getContenido(){
             return $this->contenido;

@@ -36,6 +36,11 @@
         $dao=new usuarioDAO();
         return $dao->actualizarContrasena($idUsuario, $contrasena);
     }
+
+    function buscarUsuarios(){
+        $dao=new usuarioDAO();
+        return $dao->buscarUsuarios();
+    }
 /*
     function verUsuarios(){
         $dao=new UsuarioDAO();

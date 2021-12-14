@@ -21,4 +21,9 @@
         return $dao->crearPublicacion($publicacion);
     }
 
+    function buscarPublicaciones() {
+        $dao=new publicacionDAO();
+        return $dao->buscarPublicaciones();
+    }
+
 ?>

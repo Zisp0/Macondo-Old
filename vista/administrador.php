@@ -113,59 +113,19 @@
                         <table id="example" class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th id="col1">Id</th>
-                                <th id="col2">Nombres</th>
-                                <th id="col3">Apellidos</th>
-                                <th id="col4">Seudonimo</th>
-                                <th id="col5">Email</th>
-                                <th id="col6">Rol</th>
-                                <th id="col7">Estado</th>
-                                <th id="col8">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Arquitecto faallllffffffffffff</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
-                                <td>rr</td>
-                                <td>
-                                    <button class="buttonTable"><span class="material-icons">delete</span></button>
-                                    <button class="buttonTable"><span class="material-icons">edit</span></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Arquitecto faallllffffffffffff</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
-                                <td>rr</td>
-                                <td>
-                                    <button class="buttonTable"><span class="material-icons">delete</span></button>
-                                    <button class="buttonTable"><span class="material-icons">edit</span></button>
-                                </td>
-                            </tr>
                         </tbody>        
                         </table>                  
                         </div>
                     </div>
                 </div>      
-        </div> 
-
-
-
-
-
-
-
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/administrador.js"></script>
 
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="js/lib/jquery/jquery-3.3.1.min.js"></script>
