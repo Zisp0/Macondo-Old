@@ -105,6 +105,24 @@
             
             $data_source->ejecutarActualizacion($stmt1, array()); 
         }
+
+        public function actualizarDatosUsuario(usuario $usuario){
+            $data_source = new dataSource();
+            
+            $stmt1 = "UPDATE usuario SET primerNombre = :primerNombre, segundoNombre = :segundoNombre, primerApellido = :primerApellido, segundoApellido = :segundoApellido, seudonimo = :seudonimo WHERE idUsuario = :idUsuario"; 
+            
+            $resultado = $data_source->ejecutarActualizacion($stmt1, array(
+                ':primerNombre' => $usuario->getPrimerNombre(),
+                ':segundoNombre' => $usuario->getSegundoNombre(),
+                ':primerApellido' => $usuario->getPrimerApellido(),
+                ':segundoApellido'=>$usuario->getSegundoApellido(),
+                ':seudonimo'=>$usuario->getSeudonimo(),
+                ':idUsuario'=>$usuario->getId()
+                )
+            ); 
+
+            return $resultado;
+        }
 /*
         public function verUsuarios(){
             $data_source = new DataSource();

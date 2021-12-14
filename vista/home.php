@@ -149,7 +149,7 @@
                         <input type="text" id="inputSegundoApellidoPerfil" placeholder="Segundo Apellido" name="segundoApellido">
                     </div>
                     <div>
-                        <input type="text" id="inputPseudonimoPerfil" placeholder="Pseudonimo" name="PseudonimoPerfil">
+                        <input type="text" id="inputPseudonimoPerfil" placeholder="Seudonimo" name="seudonimoPerfil">
     		        </div>
                     <button id="buttonSubirCambios">Guardar</button>
                 </div>
