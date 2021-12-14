@@ -43,11 +43,11 @@
     </header>
     <div class="menuTema">
         <input type="checkbox" class="checkbox" id="check">
-        <label class="tema" for="check">|||</label>
+        <label class="tema" for="check"><p>|||</p></label>
         <div class="panel">
             <ul>
                 <button onclick="dia();"><img id="dia" src="pictures/sun.png"></button>
-                <label><br><br></label>
+                <p></p>
                 <button onclick="noche();"><img id="noche" src="pictures/moon.png"></button>
             </ul>
         </div>

@@ -385,7 +385,7 @@ table tbody tr:nth-child(odd){
 
 .tema{
     width: 35px;
-    height: 40px;
+    height: 55px;
     background: var(--bg-color);
     box-shadow: 0px 0px 5px #000000;
     position: fixed;
@@ -394,7 +394,14 @@ table tbody tr:nth-child(odd){
     font-size: 2rem;
     color: var(--text-color);
     text-align: center;
+    justify-content: center;
     transition: right 0.5s;
+    display: flex;
+    margin: 0px;
+}
+
+.tema p{
+    margin: 0px;
 }
 
 .checkbox:checked ~ .tema{
@@ -414,6 +421,10 @@ table tbody tr:nth-child(odd){
     justify-content: center;
     flex-direction: column;
     transition: right 0.5s;
+}
+
+.panel ul{
+    margin: 0px;
 }
 
 .panel ul button{
