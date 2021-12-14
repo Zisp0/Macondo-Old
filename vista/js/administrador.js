@@ -38,7 +38,7 @@ function llenarComentarios() {
     $.ajax({
         url: "../controlador/accion/act_llenarComentarios.php",
         success: function (respuesta) {
-            $("#example tbody").append(respuesta);
+            insertarComentarios(JSON.parse(respuesta));
         }
     });
 }
@@ -124,8 +124,6 @@ function insertarComentarios(respuesta) {
             '<td>'+ respuesta[i].idComentario +'</td>'+
             '<td>'+ respuesta[i].idUsuario + '</td>'+
             '<td>'+ respuesta[i].contenido + '</td>'+
-            '<td>'+ respuesta[i].estado + '</td>'+
-            '<td>'+ respuesta[i].correo + '</td>'+
             '<td>'+ respuesta[i].estado + '</td>'+
             '<td><button class="buttonTable"><span class="material-icons">delete</span></button><button class="buttonTable"><span class="material-icons">edit</span></button></td>'+
         '</tr>';

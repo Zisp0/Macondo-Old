@@ -12,7 +12,7 @@
             $comentarios = array();
 
             foreach($data_table as $indice => $valor){
-                $comentario = new publicacion(
+                $comentario = new comentario(
                     $data_table[$indice]["idComentario"],
                     $data_table[$indice]["contenido"],
                     $data_table[$indice]["fecha"],
