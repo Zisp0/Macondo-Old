@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     $("#buttonSubirCambios").click(function () {
         validarDatos(); 
-     });
+    });
 });
 
 function cargarPrimerNombre() {
