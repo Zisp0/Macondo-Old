@@ -4,6 +4,7 @@
     
     require_once (__DIR__."/../mdb/mdbUsuario.php");
     require_once (__DIR__."/../../modelo/entidad/usuario.php");
+    require_once (__DIR__."/act_correoBienvenida.php");
 
     $primerNombre = $_POST['primerNombre'];
     $segundoNombre = $_POST['segundoNombre'];
@@ -22,7 +23,7 @@
         $_SESSION['PRIMER_NOMBRE_USUARIO'] = $usuario->getPrimerNombre();
         $_SESSION['PRIMER_APELLIDO_USUARIO'] = $usuario->getPrimerApellido();
         $_SESSION['SEUDONIMO_USUARIO'] = $usuario->getSeudonimo();
-        header("Location: ../../vista/preferenciaGeneros.php?msg=Se realizo el registro satisfactoriamente");
+        correo();
     } else{
         header("Location: ../../vista/login.php?msg=No se pudo realizar el registro");
     }

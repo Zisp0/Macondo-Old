@@ -21,6 +21,7 @@
             <img src="pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
+        
         <form action="../controlador/accion/act_registrarUsuario.php" method="POST">
             <div>
                 <input type="text" id="inputPrimerNombre" placeholder="Primer Nombre" name="primerNombre">
