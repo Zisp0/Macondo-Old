@@ -2,14 +2,35 @@ $(document).ready(function () {
     llenarUsuarios();
 
     $("#buttonUsuarios").click(function () {
+        $("#buttonPublicaciones").css("background-color","var(--primary-color)");
+        $("#buttonComentarios").css("background-color","var(--primary-color)");
+        $("#buttonUsuarios").css("background-color","#ffe000a6");
+        $(".buttonEditar").removeAttr("id");
+        $(".buttonEditar").attr("id","buttonUsuarios");
+        $(".buttonEliminar").removeAttr("id");
+        $(".buttonEliminar").attr("id","buttonUsuarios");
         llenarUsuarios();
     });  
 
     $("#buttonPublicaciones").click(function () {
+        $("#buttonUsuarios").css("background-color","var(--primary-color)");
+        $("#buttonComentarios").css("background-color","var(--primary-color)");
+        $("#buttonPublicaciones").css("background-color","#ffe000a6");
+        $(".buttonEditar").removeAttr("id");
+        $(".buttonEditar").attr("id","buttonPublicaciones");
+        $(".buttonEliminar").removeAttr("id");
+        $(".buttonEliminar").attr("id","buttonPublicaciones");
         llenarPublicaciones();
     });
 
     $("#buttonComentarios").click(function () {
+        $("#buttonPublicaciones").css("background-color","var(--primary-color)");
+        $("#buttonUsuarios").css("background-color","var(--primary-color)");
+        $("#buttonComentarios").css("background-color","#ffe000a6");
+        $(".buttonEditar").removeAttr("id");
+        $(".buttonEditar").attr("id","buttonComentarios");
+        $(".buttonEliminar").removeAttr("id");
+        $(".buttonEliminar").attr("id","buttonComentarios");
         llenarComentarios();
     })
 });

@@ -304,6 +304,7 @@ nav ul button{
     width: auto;
     height: auto;
     min-width: 500px;
+    min-height: 100%;
     background-color: var(--primary-color);
     margin-top: 70px;
     margin-left: 282px;
@@ -372,6 +373,32 @@ div.dataTables_wrapper div.dataTables_filter input {
     color: var(--text-color);
 }
 
+.contButton{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.contButton button{
+    height: 40px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+    border: 2px var(--text-color) solid;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.contButton .buttonEditar{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.contButton .buttonEliminar{
+    width: 120px;
+}
+
 #example{
     width: 100%;
     background-color: var();
@@ -379,6 +406,13 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 th, td{
     color: var(--text-color);
+    max-width: 300px;
+    height: auto;
+    word-break: break-all;
+}
+
+th:hover, td:hover{
+    background-color: var(--bg-color);
 }
 
 table tbody tr:nth-child(odd){

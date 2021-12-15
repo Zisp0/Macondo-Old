@@ -48,15 +48,25 @@
                 <article class="contenidoPost">'.$publicaciones[$indice]->getContenido().'</article>
                 <div class="containerReactionComment">
                     <div class="containerLike">
-                        <button id="buttonLike">
+                        <button>
                             <span class="material-icons">thumb_up</span><p>Me gusta</p>
                         </button>
                     </div>
                     <div class="containerDislike">
-                        <button id="buttonDislike">
+                        <button>
                             <span class="material-icons">thumb_down</span><p>No me gusta</p>
                         </button>
                     </div>
+                    
+                </div>              
+                <div class="containerInputComment">  
+                    <img src="pictures/defaultPictureUser.png" id="fotoUserComment" width="45px" height="45px">
+                    <input type="text" placeholder="Escriba su comentario"> 
+                    <button><span class="material-icons">send</span></button>   
+                </div>
+                
+                <div class="containerButtonMoreComment">
+                    <button><span class="material-icons">visibility</span><p>Ver Comentarios</p></button>
                 </div>
             </div>
             ';
@@ -65,4 +75,9 @@
     }else{
         exit("maximo");
     }
+    /*<div class="containerComment">
+                        <button>
+                            <span class="material-icons">comment</span><p>Comentar</p>
+                        </button>
+                    </div>*/
 ?>
