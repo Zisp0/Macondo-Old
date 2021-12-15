@@ -77,6 +77,16 @@
 
             </div>
         </div>
+        <div class="containerTamTexto">
+            <div class="buttonJuntos">
+                <button class="buttonIncrease">
+                    <span class="material-icons">text_increase</span>
+                </button>
+                <button class="buttonDecrease">
+                    <span class="material-icons">text_decrease</span>
+                </button>
+            </div>
+        </div>
     </div>
     
     <div class="pop-up-cambiar-contraseña">

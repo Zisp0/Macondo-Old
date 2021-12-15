@@ -151,6 +151,50 @@ nav ul button{
     font-weight: bold;
 }
 
+.containerTamTexto{
+    margin-top: 25px;
+}
+
+.containerTamTexto .buttonJuntos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.buttonJuntos button{
+    border:var(--text-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.buttonJuntos .buttonIncrease{
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border: 2px var(--bg-color) solid;
+    border-right: none;
+    width: 78px;
+    height: 48px;
+}
+
+.buttonJuntos .buttonIncrease:hover{
+    background-color: var(--bg-color);
+}
+
+.buttonJuntos .buttonDecrease{
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 2px var(--bg-color) solid;
+    width: 78px;
+    height: 48px;
+}
+
+.buttonJuntos .buttonDecrease:hover{
+    background-color: var(--bg-color);
+}
+
+
+
 .container, #buttonOptionUser, .nav{
     position: absolute;
 }
@@ -191,6 +235,7 @@ nav ul button{
     border: 2px black;
     transform: translateY(0%);
     box-shadow: 1px 1px 10px 4px var(--bg-color);
+    visibility: hidden;
 }
 
 .nav button{
@@ -229,6 +274,7 @@ nav ul button{
 #toggle:checked ~ .nav{
     opacity: 1;
     transform: translateY(10%);
+    visibility: visible;
 }
 
 #toggle:checked ~ #buttonOptionUser{
@@ -419,7 +465,7 @@ nav ul button{
     background-color: var(--bg-color);
 }
 
-.containerContent .post h3{
+.containerContent .post .tituloPost{
     margin-top: 5px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 30px;
@@ -433,11 +479,12 @@ nav ul button{
     margin-bottom: 15px;
 }
 
-.containerContent article{
+.containerContent .contenidoPost{
     display: flex;
     flex-wrap: wrap;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     word-break: break-all;
+    font-size: 22px;
     margin-top: -20px;
 }
 
@@ -452,13 +499,13 @@ nav ul button{
 
 }
 
-.containerLike p, .containerComment p, .containerDislike p{
+.containerLike p, .containerDislike p{
     font-size: 17px;
     margin-left: 5px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#buttonLike, #buttonDislike, #buttonComment{
+#buttonLike, #buttonDislike{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -469,12 +516,16 @@ nav ul button{
     border: none;
 }
 
-#buttonLike:hover, #buttonDislike:hover, #buttonComment:hover{
+#buttonLike:hover, #buttonDislike:hover{
     background-color: var(--bg-color);;
 }
 
 #buttonLike, #buttonDislike{
     margin-right: 25px;
+}
+
+#buttonLike span, #buttonDislike span{
+    color: var(--text-color);
 }
 
 .containerProfile{

@@ -44,17 +44,18 @@
                         <button id="buttonMore"><span class="material-icons">more_horiz</span></button>
                     </div> 
                 </div>
-                <h3>'.$publicaciones[$indice]->getTitulo().'</h3>
-                <article>'.$publicaciones[$indice]->getContenido().'</article>
+                <h3 class="tituloPost">'.$publicaciones[$indice]->getTitulo().'</h3>
+                <article class="contenidoPost">'.$publicaciones[$indice]->getContenido().'</article>
                 <div class="containerReactionComment">
                     <div class="containerLike">
-                        <button id="buttonLike"><img src="pictures/likePictures.png"/><p>Me gusta</p></button>
+                        <button id="buttonLike">
+                            <span class="material-icons">thumb_up</span><p>Me gusta</p>
+                        </button>
                     </div>
                     <div class="containerDislike">
-                        <button id="buttonDislike"><img src="pictures/dislikePictures.png"/><p>No me gusta</p></button>
-                    </div>
-                    <div class="containerComment">
-                        <button id="buttonComment"><img src="pictures/commentPictures.png"/><p>Comentar</p></button>
+                        <button id="buttonDislike">
+                            <span class="material-icons">thumb_down</span><p>No me gusta</p>
+                        </button>
                     </div>
                 </div>
             </div>

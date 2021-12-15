@@ -191,3 +191,32 @@ function publicarPost() {
         }
     });
 }
+
+function tamañoLetra() {
+    sizeContent = $(".contenidoPost" ).css("font-size");
+    sizeContent = parseInt(sizeContent, 10);
+    sizeTitle = $(".tituloPost" ).css("font-size");
+    sizeTitle = parseInt(sizeTitle, 10);
+} 
+
+$('.buttonIncrease').click(function(){
+        tamañoLetra();
+        if ((sizeContent + 2) <= 46) {
+            $(".contenidoPost").css("font-size", "+=2");
+        }
+        if ((sizeTitle + 2) <= 52) {
+            $(".tituloPost").css("font-size", "+=2");
+        }
+
+});
+
+$('.buttonDecrease').click(function(){
+    tamañoLetra();
+    if ((sizeContent - 2) >= 14) {
+        $(".contenidoPost").css("font-size", "-=2");
+    }
+    if ((sizeTitle - 2) >= 20) {
+        $(".tituloPost").css("font-size", "-=2");
+    }
+});
+
