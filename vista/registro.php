@@ -21,29 +21,31 @@
             <img src="pictures/butterflyLogo.png">
             <p>Macondo</p>
         </div>
-        
-        <form action="../controlador/accion/act_registrarUsuario.php" method="POST">
-            <div>
-                <input type="text" id="inputPrimerNombre" placeholder="Primer Nombre" name="primerNombre">
-                <input type="text" id="inputSegundoNombre" placeholder="Segundo Nombre" name="segundoNombre">
-            </div>    
-            <div>
-                <input type="text" id="inputPrimerApellido" placeholder="Primer Apellido" name="primerApellido">
-                <input type="text" id="inputSegundoApellido" placeholder="Segundo Apellido" name="segundoApellido">
-            </div>
-            <div>
-                <input type="email" id="inputCorreoElectronico" placeholder="Correo Electrónico" name="correo">
-                <input type="text" id="inputSeudonimo" placeholder="Seudonimo" name="seudonimo">
-            </div>
-            <div>
-                <input type="password" id="inputContraseña" placeholder="Contraseña" name="pass">
-                <input type="password" id="inputConfirmarContraseña" placeholder="Confirmar Contraseña">
-            </div>
-            <div>
-                <button id="buttonCancelar" type="reset" onclick="location.href='login.php'">Cancelar</button>
-                <button id="buttonSignUp" type="submit">Registrarse</button>
-            </div> 
-        </form>
+    
+        <div>
+            <input type="text" id="inputPrimerNombre" placeholder="Primer Nombre" name="primerNombre">
+            <input type="text" id="inputSegundoNombre" placeholder="Segundo Nombre" name="segundoNombre">
+        </div>    
+        <div>
+            <input type="text" id="inputPrimerApellido" placeholder="Primer Apellido" name="primerApellido">
+            <input type="text" id="inputSegundoApellido" placeholder="Segundo Apellido" name="segundoApellido">
+        </div>
+        <div>
+            <input type="email" id="inputCorreoElectronico" placeholder="Correo Electrónico" name="correo">
+            <input type="text" id="inputSeudonimo" placeholder="Seudonimo" name="seudonimo">
+        </div>
+        <div>
+            <input type="password" id="inputContraseña" placeholder="Contraseña" name="pass">
+            <input type="password" id="inputConfirmarContraseña" placeholder="Confirmar Contraseña">
+        </div>
+        <div>
+            <button id="buttonCancelar" type="reset" onclick="location.href='login.php'">Cancelar</button>
+            <button id="buttonSignUp">Registrarse</button>
+        </div> 
     </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/validarDatos.js"></script>
 </body>
 </html>

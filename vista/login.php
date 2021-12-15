@@ -25,18 +25,16 @@
             </div>
             
             <div class="containerInputAndButton">
-                <form action="../controlador/accion/act_login.php" method="post">
-                    <div>
-                        <label for="inputEmail" class="labelForInputEmail">Email</label>
-                        <input type="email" id="inputEmail" name="user">
-                    </div>
-                    <div>
-                        <label for="inputPassword" class="labelForInputPassword">Contraseña</label>
-                        <input type="password" id="inputPassword" name="pass">  
-                    </div>
-                    <a href="recuperarContraseña.php">¿Olvidaste tu contraseña?</a>            
-                    <button id="buttonLogIn" type="submit">Iniciar Sesión</button>
-                </form>
+                <div>
+                    <label for="inputEmail" class="labelForInputEmail">Email</label>
+                    <input type="email" id="inputEmail" name="user">
+                </div>
+                <div>
+                    <label for="inputPassword" class="labelForInputPassword">Contraseña</label>
+                    <input type="password" id="inputPassword" name="pass">  
+                </div>
+                <a href="recuperarContraseña.php">¿Olvidaste tu contraseña?</a>            
+                <button id="buttonLogIn">Iniciar Sesión</button>
 
                 <div>
                     <button id="loginGoogle">Google</button>
@@ -45,5 +43,9 @@
             </div>          
         </div>
     </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/validarDatos.js"></script>
 </body>
 </html>

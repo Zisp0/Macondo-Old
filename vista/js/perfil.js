@@ -300,6 +300,11 @@ function actualizarDatos(primerNombre, primerApellido, seudonimo) {
                 })
                 cargarPrimerNombre();
                 cargarNombreCompleto();
+                tipoPublicacion = "Perfil";
+                inicio = 0;
+                maximo = false;
+                $('#publicaciones').empty();
+                cargarPublicaciones();
             }else{
                 Swal.fire({
                     text: 'Hubo un error en la actualización',

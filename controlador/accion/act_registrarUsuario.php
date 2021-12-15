@@ -14,7 +14,31 @@
     $correo = $_POST['correo'];
     $contrasena = $_POST['pass'];
  
-        
+    $userSeudo = buscarUsuarioPorSeudonimo($seudonimo);
+    
+    if($userSeudo == null){
+        $userCorreo = buscarUsuarioPorCorreo($correo);
+
+        if($userCorreo == null){
+            $usuario = new usuario(NULL, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, 'user', NULL, 1, $correo, $contrasena);
+            $registro = registrarUsuario($usuario);
+            if($registro){
+                $_SESSION['ID_USUARIO'] = $registro;
+                $usuario = buscarUsuarioPorId($registro);
+                $_SESSION['PRIMER_NOMBRE_USUARIO'] = $usuario->getPrimerNombre();
+                $_SESSION['PRIMER_APELLIDO_USUARIO'] = $usuario->getPrimerApellido();
+                $_SESSION['SEUDONIMO_USUARIO'] = $usuario->getSeudonimo();
+                correo();
+                exit("si");
+            } else{
+                exit("no");
+            }
+        }else{
+            exit("correo");
+        }
+    }else{
+        exit("seudo");
+    }
     $usuario = new usuario(NULL, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, 'user', NULL, 1, $correo, $contrasena);
     $registro = registrarUsuario($usuario);
     if($registro){
@@ -24,6 +48,7 @@
         $_SESSION['PRIMER_APELLIDO_USUARIO'] = $usuario->getPrimerApellido();
         $_SESSION['SEUDONIMO_USUARIO'] = $usuario->getSeudonimo();
         correo();
+        exit("si");
     } else{
         header("Location: ../../vista/login.php?msg=No se pudo realizar el registro");
     }

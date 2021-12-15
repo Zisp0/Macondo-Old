@@ -55,13 +55,6 @@ CREATE TABLE reaccionComentario
   FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
 );
 
-CREATE TABLE genero
-(
-  idGenero INT NOT NULL AUTO_INCREMENT,
-  tipo VARCHAR(20) NOT NULL,
-  PRIMARY KEY (idGenero)
-);
-
 CREATE TABLE reaccionPublicacion
 (
   idReacciónPublicación INT NOT NULL AUTO_INCREMENT,
@@ -73,34 +66,4 @@ CREATE TABLE reaccionPublicacion
   FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
 );
 
-CREATE TABLE generoPublicacion
-(
-  idPublicacion INT NOT NULL,
-  idGenero INT NOT NULL,
-  PRIMARY KEY (idPublicacion, idGenero),
-  FOREIGN KEY (idPublicacion) REFERENCES publicacion(idPublicacion),
-  FOREIGN KEY (idGenero) REFERENCES genero(idGenero)
-);
-
-CREATE TABLE preferenciaUsuario
-(
-  idGenero INT NOT NULL,
-  idUsuario INT NOT NULL,
-  PRIMARY KEY (idGenero, idUsuario),
-  FOREIGN KEY (idGenero) REFERENCES genero(idGenero),
-  FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
-);
-
 Insert into usuario (primernombre, primerapellido, seudonimo, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 'juancho1', 'user', NULL, 1, 'juancho@gmail.com', '12345');
-Insert into genero (tipo) values ('Terror');
-Insert into genero (tipo) values ('Romance');
-Insert into genero (tipo) values ('Ciencia Ficción');
-Insert into genero (tipo) values ('Comedia');
-Insert into genero (tipo) values ('Documental');
-Insert into genero (tipo) values ('Científicos');
-Insert into genero (tipo) values ('Tecnología');
-Insert into genero (tipo) values ('Drama');
-Insert into genero (tipo) values ('Bélico');
-Insert into genero (tipo) values ('Aventura');
-Insert into genero (tipo) values ('Mágico');
-Insert into genero (tipo) values ('Crímenes');

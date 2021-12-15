@@ -41,6 +41,16 @@
         $dao=new usuarioDAO();
         return $dao->buscarUsuarios();
     }
+
+    function buscarUsuarioPorSeudonimo($seudonimo){
+        $dao=new usuarioDAO();
+        return $dao->buscarUsuarioPorSeudonimo($seudonimo);
+    }
+
+    function buscarUsuarioPorCorreo($correo){
+        $dao=new usuarioDAO();
+        return $dao->buscarUsuarioPorCorreo($correo);
+    }
 /*
     function verUsuarios(){
         $dao=new UsuarioDAO();

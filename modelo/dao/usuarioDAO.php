@@ -162,6 +162,58 @@
             
             return $usuarios;
         }
+
+        public function buscarUsuarioPorSeudonimo($seudonimo){
+            $data_source = new DataSource();
+            
+            $data_table = $data_source->ejecutarConsulta("SELECT * FROM usuario WHERE seudonimo = '$seudonimo'", NULL);
+
+            $usuario=null;
+
+            foreach($data_table as $indice => $valor){
+                $usuario = new usuario(
+                    $data_table[$indice]["idUsuario"],
+                    $data_table[$indice]["primerNombre"],
+                    $data_table[$indice]["segundoNombre"],
+                    $data_table[$indice]["primerApellido"],
+                    $data_table[$indice]["segundoApellido"],
+                    $data_table[$indice]["seudonimo"],
+                    $data_table[$indice]["rol"],
+                    $data_table[$indice]["foto"],
+                    $data_table[$indice]["estado"],
+                    $data_table[$indice]["correo"],
+                    $data_table[$indice]["contrasena"]
+                );
+            }
+            
+            return $usuario;
+        }
+
+        public function buscarUsuarioPorCorreo($correo){
+            $data_source = new DataSource();
+            
+            $data_table = $data_source->ejecutarConsulta("SELECT * FROM usuario WHERE correo = '$correo'", NULL);
+
+            $usuario=null;
+
+            foreach($data_table as $indice => $valor){
+                $usuario = new usuario(
+                    $data_table[$indice]["idUsuario"],
+                    $data_table[$indice]["primerNombre"],
+                    $data_table[$indice]["segundoNombre"],
+                    $data_table[$indice]["primerApellido"],
+                    $data_table[$indice]["segundoApellido"],
+                    $data_table[$indice]["seudonimo"],
+                    $data_table[$indice]["rol"],
+                    $data_table[$indice]["foto"],
+                    $data_table[$indice]["estado"],
+                    $data_table[$indice]["correo"],
+                    $data_table[$indice]["contrasena"]
+                );
+            }
+            
+            return $usuario;
+        }
 /*
         public function verUsuarios(){
             $data_source = new DataSource();
