@@ -10,7 +10,7 @@
     $segundoApellido = $_GET['segundoApellido'];
     $seudonimo = $_GET['seudonimo'];
 
-    $usuario = new usuario($idUsuario, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, null, null, null, null, null);
+    $usuario = new usuario($idUsuario, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, null, null, null, null, null, null);
 
     $respuesta = actualizarDatosUsuario($usuario);
 
