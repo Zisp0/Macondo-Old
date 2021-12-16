@@ -72,7 +72,7 @@
                     <button onclick="comentar('.$publicaciones[$indice]->getIdPublicacion().')"><span class="material-icons">send</span></button>   
                 </div>
                 <div class="containerButtonMoreComment">
-                    <button><span class="material-icons">visibility</span><p>Ver Comentarios</p></button>
+                    <button onclick="mostrarComentarios('.$publicaciones[$indice]->getIdPublicacion().')"><span class="material-icons">visibility</span><p>Ver Comentarios</p></button>
                 </div>
             </div>
             ';

@@ -173,7 +173,7 @@
                     <p>Comentarios</p>
                     <button id="buttonCerrarModalComentarios" onclick="cerrar();"><img src="pictures/iconCerrar.png" alt=""></button>
                 </div>
-                <div class="containerShowComment">
+                <div class="containerShowComment" id="comentarios">
                     <div class="comentario">
                         <div class="infoUser">
                             <img src="pictures/profileDefaultPicture.png" width="45px" height="45px" alt="">

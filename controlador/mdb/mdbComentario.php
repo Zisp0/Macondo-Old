@@ -15,4 +15,10 @@
         $dao=new comentarioDAO();
         return $dao->actualizarEstadoComentario($idComentario, $estado);
     }
+
+    function cargarComentarios($inicio, $idPublicacion) {
+        $dao=new comentarioDAO();
+        return $dao->cargarComentarios($inicio, $idPublicacion);
+    }
+   
 ?>
