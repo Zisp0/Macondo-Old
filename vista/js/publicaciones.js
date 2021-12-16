@@ -120,7 +120,6 @@ function comentar(id) {
                 hora: hora
             },
             success: function (respuesta) {
-                console.log(respuesta);
                 if(respuesta == "si"){
                     Swal.fire({
                         title:'Publicado',
