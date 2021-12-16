@@ -108,10 +108,6 @@
          <!--Ejemplo tabla con DataTables-->
         <div class="container">
             <div class="row" id="contenedorTabla">
-                <div class="contButton">
-                    <button class="buttonEditar" id="1">Editar</button>
-                    <button class="buttonEliminar" id="1">Eliminar</button>
-                </div>
                 <div class="col-lg-12">
                     <div class="table-responsive">        
                         <table id="example" class="table table-striped table-bordered">
