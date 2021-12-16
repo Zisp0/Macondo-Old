@@ -7,7 +7,7 @@
         public function verPublicaciones($inicio){
             $data_source = new dataSource();
             
-            $data_table = $data_source->ejecutarConsulta("SELECT * FROM publicacion ORDER BY idPublicacion DESC LIMIT 5 OFFSET $inicio", NULL);
+            $data_table = $data_source->ejecutarConsulta("SELECT * FROM publicacion WHERE estado = 1 ORDER BY idPublicacion DESC LIMIT 5 OFFSET $inicio", NULL);
 
             $publicacion=null;
             $publicaciones=array();
@@ -32,7 +32,7 @@
         public function verPublicacionesPorTipo($inicio, $tipo){
             $data_source = new dataSource();
             
-            $data_table = $data_source->ejecutarConsulta("SELECT * FROM publicacion WHERE tipo = '$tipo' ORDER BY idpublicacion DESC LIMIT 5 OFFSET $inicio", NULL);
+            $data_table = $data_source->ejecutarConsulta("SELECT * FROM publicacion WHERE tipo = '$tipo' AND estado = 1 ORDER BY idpublicacion DESC LIMIT 5 OFFSET $inicio", NULL);
 
             $publicacion = null;
             $publicaciones = array();
@@ -51,7 +51,6 @@
 
                 array_push($publicaciones, $publicacion);
             }
-            
             
             return $publicaciones;
         }
@@ -59,7 +58,7 @@
         public function verPublicacionesPorUsuario($inicio, $idUsuario){
             $data_source = new dataSource();
             
-            $data_table = $data_source->ejecutarConsulta("SELECT * FROM publicacion WHERE idUsuario = $idUsuario ORDER BY idpublicacion DESC LIMIT 5 OFFSET $inicio", NULL);
+            $data_table = $data_source->ejecutarConsulta("SELECT * FROM publicacion WHERE idUsuario = $idUsuario AND estado = 1 ORDER BY idpublicacion DESC LIMIT 5 OFFSET $inicio", NULL);
 
             $publicacion = null;
             $publicaciones = array();
@@ -78,7 +77,6 @@
 
                 array_push($publicaciones, $publicacion);
             }
-            
             
             return $publicaciones;
         }
@@ -124,7 +122,6 @@
 
                 array_push($publicaciones, $publicacion);
             }
-            
             
             return $publicaciones;
         }
