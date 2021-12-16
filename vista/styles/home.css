@@ -1074,3 +1074,8 @@ nav ul button{
 article, h1, h2, h3, p{
     color: var(--text-color);
 }
+
+.containerInputComment img{
+    height: 45px;
+    border-radius: 50%;
+}

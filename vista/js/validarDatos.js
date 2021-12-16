@@ -164,7 +164,6 @@ function intentarSingUp(primerNombre, segundoNombre, primerApellido, segundoApel
             pass: pass
         },
         success: function (respuesta) {
-            console.log(respuesta);
             if(respuesta == "correo"){
                 Swal.fire({
                     text: 'Ya existe un usuario registrado con el correo ingresado',

@@ -14,13 +14,8 @@ $(document).ready(function () {
 
     $("#btnInicio").click(function () {
         tipoPublicacion = "Inicio";
+        coloresNav();
         $("#btnInicio").css("background-color","#ffe000a6");
-        $("#btnCuentos").css("background-color","var(--primary-color)");
-        $("#btnHistorias").css("background-color","var(--primary-color)");
-        $("#btnLiteratura").css("background-color","var(--primary-color)");
-        $("#btnPoesia").css("background-color","var(--primary-color)");
-        $("#btnArticulos").css("background-color","var(--primary-color)");
-        $("#buttonPerfil").css("background-color","var(--primary-color)");
         $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
@@ -31,13 +26,8 @@ $(document).ready(function () {
 
     $("#btnHistorias").click(function () {
         tipoPublicacion = "Historias";
+        coloresNav();
         $("#btnHistorias").css("background-color","#ffe000a6");
-        $("#btnCuentos").css("background-color","var(--primary-color)");
-        $("#btnInicio").css("background-color","var(--primary-color)");
-        $("#btnLiteratura").css("background-color","var(--primary-color)");
-        $("#btnPoesia").css("background-color","var(--primary-color)");
-        $("#btnArticulos").css("background-color","var(--primary-color)");
-        $("#buttonPerfil").css("background-color","var(--primary-color)");
         $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
@@ -48,13 +38,8 @@ $(document).ready(function () {
     
     $("#btnCuentos").click(function () {
         tipoPublicacion = "Cuentos";
+        coloresNav();
         $("#btnCuentos").css("background-color","#ffe000a6");
-        $("#btnInicio").css("background-color","var(--primary-color)");
-        $("#btnHistorias").css("background-color","var(--primary-color)");
-        $("#btnLiteratura").css("background-color","var(--primary-color)");
-        $("#btnPoesia").css("background-color","var(--primary-color)");
-        $("#btnArticulos").css("background-color","var(--primary-color)");
-        $("#buttonPerfil").css("background-color","var(--primary-color)");
         $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
@@ -65,13 +50,8 @@ $(document).ready(function () {
     
     $("#btnLiteratura").click(function () {
         tipoPublicacion = "Literatura";
+        coloresNav();
         $("#btnLiteratura").css("background-color","#ffe000a6");
-        $("#btnInicio").css("background-color","var(--primary-color)");
-        $("#btnHistorias").css("background-color","var(--primary-color)");
-        $("#btnCuentos").css("background-color","var(--primary-color)");
-        $("#btnPoesia").css("background-color","var(--primary-color)");
-        $("#btnArticulos").css("background-color","var(--primary-color)");
-        $("#buttonPerfil").css("background-color","var(--primary-color)");
         $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
@@ -82,13 +62,8 @@ $(document).ready(function () {
     
     $("#btnPoesia").click(function () {
         tipoPublicacion = "Poesia";
+        coloresNav();
         $("#btnPoesia").css("background-color","#ffe000a6");
-        $("#btnInicio").css("background-color","var(--primary-color)");
-        $("#btnHistorias").css("background-color","var(--primary-color)");
-        $("#btnCuentos").css("background-color","var(--primary-color)");
-        $("#btnLiteratura").css("background-color","var(--primary-color)");
-        $("#btnArticulos").css("background-color","var(--primary-color)");
-        $("#buttonPerfil").css("background-color","var(--primary-color)");
         $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
@@ -99,13 +74,8 @@ $(document).ready(function () {
     
     $("#btnArticulos").click(function () {
         tipoPublicacion = "Artículos";
+        coloresNav();
         $("#btnArticulos").css("background-color","#ffe000a6");
-        $("#btnInicio").css("background-color","var(--primary-color)");
-        $("#btnHistorias").css("background-color","var(--primary-color)");
-        $("#btnCuentos").css("background-color","var(--primary-color)");
-        $("#btnLiteratura").css("background-color","var(--primary-color)");
-        $("#btnPoesia").css("background-color","var(--primary-color)");
-        $("#buttonPerfil").css("background-color","var(--primary-color)");
         $(".containerInputPost").show();
         $(".containerProfile").hide();
         $('#publicaciones').empty();
@@ -116,19 +86,68 @@ $(document).ready(function () {
 
     $("#buttonPerfil").click(function(){
         tipoPublicacion = "Perfil";
+        coloresNav();
         $("#buttonPerfil").css("background-color","#ffe000a6");
-        $("#btnInicio").css("background-color","var(--primary-color)");
-        $("#btnHistorias").css("background-color","var(--primary-color)");
-        $("#btnCuentos").css("background-color","var(--primary-color)");
-        $("#btnLiteratura").css("background-color","var(--primary-color)");
-        $("#btnPoesia").css("background-color","var(--primary-color)");
-        $("#btnArticulos").css("background-color","var(--primary-color)");
         inicio = 0;
         maximo = false;
         $('#publicaciones').empty();
         cargarPublicaciones();
     });
 });
+
+function comentar(id) {
+    let comentario = $("#"+id).val().trim();
+
+    if(comentario == ""){
+        Swal.fire({
+            title:'Ingrese el comentario',
+            text: 'Por favor ingrese el contenido de su comentario',
+            icon: 'warning'
+        })
+    }else{
+        let hoy = new Date();
+        let fecha = hoy.getFullYear() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getDate();
+        let hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+
+        $.ajax({
+            url: "../controlador/accion/act_publicarComentario.php",
+            metodh: 'POST',
+            dataType: 'text',
+            data: {
+                idPublicaion: id,
+                comentario: comentario,
+                fecha: fecha,
+                hora: hora
+            },
+            success: function (respuesta) {
+                console.log(respuesta);
+                if(respuesta == "si"){
+                    Swal.fire({
+                        title:'Publicado',
+                        text: 'Publicado con éxito',
+                        icon: 'success'
+                    })
+                }else{
+                    Swal.fire({
+                        title:'Error en la publicacaión',
+                        text: 'Hubo un error en la publicación',
+                        icon: 'error'
+                    })
+                }
+            }
+        });
+    }
+}
+
+function coloresNav() {
+    $("#btnInicio").css("background-color","var(--primary-color)");
+    $("#btnHistorias").css("background-color","var(--primary-color)");
+    $("#btnCuentos").css("background-color","var(--primary-color)");
+    $("#btnLiteratura").css("background-color","var(--primary-color)");
+    $("#btnPoesia").css("background-color","var(--primary-color)");
+    $("#btnArticulos").css("background-color","var(--primary-color)");
+    $("#buttonPerfil").css("background-color","var(--primary-color)");
+}
 
 let observador = new IntersectionObserver((entradas, observador) => {
     entradas.forEach(entradas => {
@@ -140,8 +159,6 @@ let observador = new IntersectionObserver((entradas, observador) => {
     rootMargin: '0px 0px 200px 0px',
     threshold: 1.0
 });
-
-
 
 const cargarPublicaciones = async => {
     if(maximo){
