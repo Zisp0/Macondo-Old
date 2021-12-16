@@ -11,6 +11,7 @@ CREATE TABLE usuario
   estado INT NOT NULL,
   correo VARCHAR(50) NOT NULL,
   contrasena VARCHAR(30) NOT NULL,
+  token VARCHAR(4),
   PRIMARY KEY (idUsuario),
   UNIQUE (correo),
   UNIQUE (seudonimo)

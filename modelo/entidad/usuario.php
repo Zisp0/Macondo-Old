@@ -17,9 +17,10 @@
         public $estado;
         public $correo;
         public $contrasena;
+        public $token;
         
         
-        public function __construct($idUsuario, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, $rol, $foto, $estado, $correo, $contrasena){
+        public function __construct($idUsuario, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, $rol, $foto, $estado, $correo, $contrasena, $token){
 
             $this->idUsuario = $idUsuario;
             $this->primerNombre = $primerNombre;
@@ -32,6 +33,7 @@
             $this->estado = $estado;
             $this->correo = $correo;
             $this->contrasena = $contrasena;
+            $this->token = $token;
         }
         
         // Métodos GET
@@ -77,6 +79,10 @@
 
         public function getContrasena(){
             return $this->contrasena;
+        }
+
+        public function getToken(){
+            return $this->token;
         }
 
         //Métodos SET
@@ -132,6 +138,11 @@
 
         public function setContrasena($contrasena){
             $this->contrasena = $contrasena;
+            return $this;
+        }
+
+        public function setToken($token){
+            $this->token = $token;
             return $this;
         }
     }

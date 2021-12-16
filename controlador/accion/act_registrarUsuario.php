@@ -20,7 +20,7 @@
         $userCorreo = buscarUsuarioPorCorreo($correo);
 
         if($userCorreo == null){
-            $usuario = new usuario(NULL, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, 'user', NULL, 1, $correo, $contrasena);
+            $usuario = new usuario(NULL, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $seudonimo, 'user', NULL, 1, $correo, $contrasena, NULL);
             $registro = registrarUsuario($usuario);
             if($registro){
                 $_SESSION['ID_USUARIO'] = $registro;

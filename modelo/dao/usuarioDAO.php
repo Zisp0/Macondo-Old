@@ -43,7 +43,8 @@
                         $data_table[$indice]["foto"],
                         $data_table[$indice]["estado"],
                         $data_table[$indice]["correo"],
-                        $data_table[$indice]["contrasena"]
+                        $data_table[$indice]["contrasena"],
+                        $data_table[$indice]["token"]
                     );
                 }
             }
@@ -91,7 +92,8 @@
                     $data_table[$indice]["foto"],
                     $data_table[$indice]["estado"],
                     $data_table[$indice]["correo"],
-                    $data_table[$indice]["contrasena"]
+                    $data_table[$indice]["contrasena"],
+                    $data_table[$indice]["token"]
                 );
             }
             
@@ -154,7 +156,8 @@
                     $data_table[$indice]["foto"],
                     $data_table[$indice]["estado"],
                     $data_table[$indice]["correo"],
-                    $data_table[$indice]["contrasena"]
+                    $data_table[$indice]["contrasena"],
+                    $data_table[$indice]["token"]
                 );
 
                 array_push($usuarios, $usuario);
@@ -182,7 +185,8 @@
                     $data_table[$indice]["foto"],
                     $data_table[$indice]["estado"],
                     $data_table[$indice]["correo"],
-                    $data_table[$indice]["contrasena"]
+                    $data_table[$indice]["contrasena"],
+                    $data_table[$indice]["token"]
                 );
             }
             
@@ -208,7 +212,8 @@
                     $data_table[$indice]["foto"],
                     $data_table[$indice]["estado"],
                     $data_table[$indice]["correo"],
-                    $data_table[$indice]["contrasena"]
+                    $data_table[$indice]["contrasena"],
+                    $data_table[$indice]["token"]
                 );
             }
             
