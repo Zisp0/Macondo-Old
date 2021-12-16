@@ -1,7 +1,7 @@
 const expresiones = {
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+$/,
     contrasena: /(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-    nombres: /^[a-zA-Z]{1,20}$/,
+    nombres: /^[a-zA-ZÀ-ÿ\s]{1,20}$/,
     seudo: /^[a-zA-Z0-9_.+-]{1,20}$/ 
 }
 
