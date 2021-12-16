@@ -167,6 +167,44 @@
             </div>
         </div>
 
+        <div class="pop-up-comentarios">
+            <div class="pop-up-wrap-comentarios">
+                <div class="containerTituloyBotonCerrar">
+                    <p>Comentarios</p>
+                    <button id="buttonCerrarModalComentarios" onclick="cerrar();"><img src="pictures/iconCerrar.png" alt=""></button>
+                </div>
+                <div class="containerShowComment">
+                    <div class="comentario">
+                        <div class="infoUser">
+                            <img src="pictures/profileDefaultPicture.png" width="45px" height="45px" alt="">
+                            <p>Name user</p>
+                        </div>    
+                        <div class="contenidoComment">
+                            <p>Contenido del comentario</p>
+                        </div>
+                    </div>    
+                    <div class="comentario">
+                        <div class="infoUser">
+                            <img src="pictures/profileDefaultPicture.png" width="45px" height="45px" alt="">
+                            <p>Name user</p>
+                        </div>    
+                        <div class="contenidoComment">
+                            <p>Contenido del comentarioffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+                        </div>
+                    </div>
+                    <div class="comentario">
+                        <div class="infoUser">
+                            <img src="pictures/profileDefaultPicture.png" width="45px" height="45px" alt="">
+                            <p>Name user</p>
+                        </div>    
+                        <div class="contenidoComment">
+                            <p>Contenido del comentario</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="pop-up-imagen-perfil">
             <div class="pop-up-wrap-imagen-perfil">
                 <div class="containerTituloyBotonCerrar">
@@ -233,6 +271,7 @@
     <script src="js/perfil.js"></script>
     <script src="js/temas.js"></script>
     <script src="js/popUp.js"></script>
+    <script src="js/comentarios.js"></script>
     <script src="js/cambiarContraseña.js"></script>
 </body>
 </html>

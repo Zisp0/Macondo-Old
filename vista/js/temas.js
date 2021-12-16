@@ -31,6 +31,7 @@ function dia(){
     document.getElementById('buttonCerrarModalPerfil').style.filter = "invert(0%)";
     document.getElementById('buttonCerrarModalImagenPerfil').style.filter = "invert(0%)";
     document.getElementById('buttonCerrarModalCambiarContraseña').style.filter = "invert(0%)";
+    document.getElementById('buttonCerrarModalComentarios').style.filter = "invert(0%)";
 }
 
 function noche(){
@@ -52,4 +53,5 @@ function noche(){
     document.getElementById('buttonCerrarModalPerfil').style.filter = "invert(100%)";
     document.getElementById('buttonCerrarModalImagenPerfil').style.filter = "invert(100%)";
     document.getElementById('buttonCerrarModalCambiarContraseña').style.filter = "invert(100%)";
+    document.getElementById('buttonCerrarModalComentarios').style.filter = "invert(100%)";
 }

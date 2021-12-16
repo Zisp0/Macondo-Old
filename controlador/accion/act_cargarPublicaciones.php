@@ -71,35 +71,6 @@
                     <input type="text" placeholder="Escriba su comentario" id="'.$publicaciones[$indice]->getIdPublicacion().'"> 
                     <button onclick="comentar('.$publicaciones[$indice]->getIdPublicacion().')"><span class="material-icons">send</span></button>   
                 </div>
-                <div class="containerShowComment">
-                    <div class="comentario">
-                        <div class="infoUser">
-                            <img src="pictures/profileDefaultPicture.png" width="45px" height="45px" alt="">
-                            <p>Name user</p>
-                        </div>    
-                        <div class="contenidoComment">
-                            <p>Contenido del comentario</p>
-                        </div>
-                    </div>    
-                    <div class="comentario">
-                        <div class="infoUser">
-                            <img src="pictures/profileDefaultPicture.png" width="45px" height="45px" alt="">
-                            <p>Name user</p>
-                        </div>    
-                        <div class="contenidoComment">
-                            <p>Contenido del comentarioffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
-                        </div>
-                    </div>
-                    <div class="comentario">
-                        <div class="infoUser">
-                            <img src="pictures/profileDefaultPicture.png" width="45px" height="45px" alt="">
-                            <p>Name user</p>
-                        </div>    
-                        <div class="contenidoComment">
-                            <p>Contenido del comentario</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="containerButtonMoreComment">
                     <button><span class="material-icons">visibility</span><p>Ver Comentarios</p></button>
                 </div>
