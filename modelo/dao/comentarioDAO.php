@@ -27,6 +27,24 @@
             
             return $comentarios;
         }
+
+        public function crearComentario(comentario $comentario){
+            $data_source = new dataSource();
+            
+            $stmt1 = "INSERT INTO comentario (contenido, fecha, hora, estado, idPublicacion, idUsuario) VALUES (:contenido, :fecha, :hora, :estado, :idPublicacion, :idUsuario)"; 
+            
+            $resultado = $data_source->ejecutarActualizacion($stmt1, array(
+                ':contenido' => $comentario->getContenido(),
+                ':fecha' => $comentario->getFecha(),
+                ':hora' => $comentario->getHora(),
+                ':estado'=>$comentario->getEstado(),
+                ':idPublicacion'=>$comentario->getIdPublicacion(),
+                ':idUsuario'=>$comentario->getIdUsuario()
+                )
+            ); 
+
+            return $resultado;
+        }
     }
 
 ?>

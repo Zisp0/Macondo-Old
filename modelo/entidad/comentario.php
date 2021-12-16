@@ -32,13 +32,13 @@
         public function getHora(){
             return $this->hora;
         }
-        public function getEestado(){
+        public function getEstado(){
             return $this->estado;
         }
         public function getIdPublicacion(){
             return $this->idPublicacion;
         }
-        public function getId(){
+        public function getIdUsuario(){
             return $this->idUsuario;
         }
 
@@ -68,7 +68,7 @@
             $this->idPublicacion = $idPublicacion;
             return $this;
         }
-        public function setId($idUsuario){
+        public function setIdUsuario($idUsuario){
             $this->idUsuario = $idUsuario;
             return $this;
         }

@@ -14,10 +14,11 @@
     }else{
         $publicaciones = cargarPublicacionesPorTipo($inicio, $tipo);
     }
-        
+    
     if(count($publicaciones) > 0){
         $resultado = "";
         $usuarios = array();
+        $user = buscarUsuarioPorId($_SESSION['ID_USUARIO']);
 
         foreach($publicaciones as $indice => $valor){
             array_push($usuarios, buscarUsuarioPorId($publicaciones[$indice]->getIdUsuario()));
@@ -59,10 +60,16 @@
                     </div>
                     
                 </div>              
-                <div class="containerInputComment">  
-                    <img src="pictures/defaultPictureUser.png" id="fotoUserComment" width="45px" height="45px">
-                    <input type="text" placeholder="Escriba su comentario"> 
-                    <button><span class="material-icons">send</span></button>   
+                <div class="containerInputComment">
+                    <img src="';
+                    if($user->getFoto() == NULL){
+                        $resultado .= 'pictures/defaultPictureUser.png';
+                    }else{
+                        $resultado .= $user->getFoto();
+                    }
+                    $resultado .= '" width="45px" height="45px">
+                    <input type="text" placeholder="Escriba su comentario" id="'.$publicaciones[$indice]->getIdPublicacion().'"> 
+                    <button onclick="comentar('.$publicaciones[$indice]->getIdPublicacion().')"><span class="material-icons">send</span></button>   
                 </div>
                 
                 <div class="containerButtonMoreComment">
