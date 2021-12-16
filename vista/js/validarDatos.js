@@ -58,6 +58,12 @@ function intentarLogIn(email, pass) {
                 document.location.href='/Macondo/vista/home.php';
             }else if(respuesta == "admin"){
                 document.location.href='/Macondo/vista/administrador.php';
+            }else if(respuesta == "ban"){
+                Swal.fire({
+                    title: 'Cuenta suspendida',
+                    text: 'Su cuenta ha sido suspendida por incumplir los términos y condiciones de Macondo',
+                    icon: 'error'
+                })
             }
         }
     });

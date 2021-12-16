@@ -22,7 +22,11 @@
             $_SESSION['SEUDONIMO_USUARIO'] = $user->getSeudonimo();
             
             if ($user->getRol() == 'user') {
-                exit("user");
+                if($user->getEstado() != 1){
+                    exit("ban");
+                }else{
+                    exit("user");
+                }
             } else if(($user->getRol() == 'admin')){
                 exit("admin");
             }
