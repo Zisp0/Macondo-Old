@@ -10,4 +10,9 @@
         $dao=new comentarioDAO();
         return $dao->crearComentario($comentario);
     }
+
+    function actualizarEstadoComentario($idComentario, $estado) {
+        $dao=new comentarioDAO();
+        return $dao->actualizarEstadoComentario($idComentario, $estado);
+    }
 ?>

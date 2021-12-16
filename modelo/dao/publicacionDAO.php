@@ -125,6 +125,16 @@
             
             return $publicaciones;
         }
+
+        function actualizarEstadoPublicacion($idPublicacion, $estado){
+            $data_source = new dataSource();
+            
+            $stmt1 = "UPDATE publicacion SET estado = $estado WHERE idPublicacion = $idPublicacion"; 
+            
+            $resultado = $data_source->ejecutarActualizacion($stmt1, array()); 
+
+            return $resultado;
+        }
     }
 
 ?>

@@ -81,7 +81,9 @@ function insertarUsuarios(respuesta) {
         "<th id='col8'>Opciones</th>"
     );
 
+    let seudonimo = "";
     $.each(respuesta, function(i) {
+        seudonimo = "'"+respuesta[i].seudonimo+"'";
         Inser += '<tr>'+
             '<td>'+ respuesta[i].idUsuario +'</td>'+
             '<td>'+ respuesta[i].primerNombre + ' ' + respuesta[i].segundoNombre + '</td>'+
@@ -90,7 +92,10 @@ function insertarUsuarios(respuesta) {
             '<td>'+ respuesta[i].correo + '</td>'+
             '<td>'+ respuesta[i].rol + '</td>'+
             '<td>'+ respuesta[i].estado + '</td>'+
-            '<td><button class="buttonTable"><span class="material-icons">delete</span></button><button class="buttonTable"><span class="material-icons">edit</span></button></td>'+
+            '<td><button class="buttonTable">'+
+                '<span class="material-icons">delete</span></button>'+
+            '<button class="buttonTable" onclick="editarUsuario('+respuesta[i].idUsuario+', '+respuesta[i].estado+', '+seudonimo+')">'+
+                '<span class="material-icons">edit</span></button></td>'+
         '</tr>';
     })
 
@@ -112,14 +117,19 @@ function insertarPublicaciones(respuesta) {
         "<th id='col6'>Opciones</th>"
     );
 
+    let titulo = "";
     $.each(respuesta, function(i) {
+        titulo = "'"+respuesta[i].titulo+"'";
         Inser += '<tr>' +
             '<td>'+ respuesta[i].idPublicacion +'</td>'+
             '<td>'+ respuesta[i].titulo + '</td>'+
             '<td>'+ respuesta[i].contenido + '</td>'+
             '<td>'+ respuesta[i].idUsuario + '</td>'+
             '<td>'+ respuesta[i].estado + '</td>'+
-            '<td><button class="buttonTable"><span class="material-icons">delete</span></button><button class="buttonTable"><span class="material-icons">edit</span></button></td>'+
+            '<td><button class="buttonTable">'+
+                '<span class="material-icons">delete</span></button>'+
+            '<button class="buttonTable" onclick="editarPublicacion('+respuesta[i].idPublicacion+', '+respuesta[i].estado+', '+titulo+')">'+
+                '<span class="material-icons">edit</span></button></td>'+
         '</tr>';
     })
 
@@ -146,9 +156,168 @@ function insertarComentarios(respuesta) {
             '<td>'+ respuesta[i].idUsuario + '</td>'+
             '<td>'+ respuesta[i].contenido + '</td>'+
             '<td>'+ respuesta[i].estado + '</td>'+
-            '<td><button class="buttonTable"><span class="material-icons">delete</span></button><button class="buttonTable"><span class="material-icons">edit</span></button></td>'+
+            '<td><button class="buttonTable">'+
+                '<span class="material-icons">delete</span></button>'+
+            '<button class="buttonTable" onclick="editarComentario('+respuesta[i].idComentario+', '+respuesta[i].estado+')">'+
+                '<span class="material-icons">edit</span></button></td>'+
         '</tr>';
     })
 
     $("#example tbody").append(Inser);
+}
+
+function editarUsuario(id, estado, seudonimo) {
+    let mensaje = "Estás a punto de ";
+    if(estado == 1){
+        mensaje += "banear";
+        estado = 2;
+    }else{
+        mensaje += "habilitar";
+        estado = 1;
+    }
+    mensaje += " al usuario " + seudonimo +"!";
+    
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: mensaje,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, estoy seguro!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "../controlador/accion/act_editarEstadoUsuario.php",
+                method: 'POST',
+                dataType: 'text',
+                data: {
+                    id: id,
+                    estado: estado
+                },
+                success: function (resultado) {
+                    if(resultado == "si"){
+                        Swal.fire(
+                            'Completo!',
+                            'El estado del usuario ha sido modificado.',
+                            'success'
+                        )
+                        llenarUsuarios();
+                    }else{
+                        Swal.fire(
+                            'Error!',
+                            'Ha ocurrido un error.',
+                            'error'
+                        )
+                    }
+                }
+            })
+            
+        }
+    })
+}
+
+function editarPublicacion(id, estado, titulo) {
+    let mensaje = 'Estás a punto de ';
+    if(estado == 1){
+        mensaje += 'banear';
+        estado = 2;
+    }else{
+        mensaje += 'habilitar';
+        estado = 1;
+    }
+    mensaje += ' la publicación "' + titulo +'"!';
+    
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: mensaje,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, estoy seguro!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "../controlador/accion/act_editarEstadoPublicacion.php",
+                method: 'POST',
+                dataType: 'text',
+                data: {
+                    id: id,
+                    estado: estado
+                },
+                success: function (resultado) {
+                    if(resultado == "si"){
+                        Swal.fire(
+                            'Completo!',
+                            'El estado de la publicación ha sido modificado.',
+                            'success'
+                        )
+                        llenarPublicaciones();
+                    }else{
+                        Swal.fire(
+                            'Error!',
+                            'Ha ocurrido un error.',
+                            'error'
+                        )
+                    }
+                }
+            })
+            
+        }
+    })
+}
+
+function editarComentario(id, estado) {
+    let mensaje = 'Estás a punto de ';
+    if(estado == 1){
+        mensaje += 'banear';
+        estado = 2;
+    }else{
+        mensaje += 'habilitar';
+        estado = 1;
+    }
+    mensaje += ' el comentario con ID = "' + id +'"!';
+    
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: mensaje,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si, estoy seguro!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "../controlador/accion/act_editarEstadoComentario.php",
+                method: 'POST',
+                dataType: 'text',
+                data: {
+                    id: id,
+                    estado: estado
+                },
+                success: function (resultado) {
+                    if(resultado == "si"){
+                        Swal.fire(
+                            'Completo!',
+                            'El estado del comentario ha sido modificado.',
+                            'success'
+                        )
+                        llenarComentarios();
+                    }else{
+                        Swal.fire(
+                            'Error!',
+                            'Ha ocurrido un error.',
+                            'error'
+                        )
+                    }
+                }
+            })
+            
+        }
+    })
 }

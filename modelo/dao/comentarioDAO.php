@@ -45,6 +45,16 @@
 
             return $resultado;
         }
+
+        function actualizarEstadoComentario($idComentario, $estado){
+            $data_source = new dataSource();
+            
+            $stmt1 = "UPDATE comentario SET estado = $estado WHERE idComentario = $idComentario"; 
+            
+            $resultado = $data_source->ejecutarActualizacion($stmt1, array()); 
+
+            return $resultado;
+        }
     }
 
 ?>

@@ -214,6 +214,16 @@
             
             return $usuario;
         }
+
+        function actualizarEstadoUsuario($idUsuario, $estado){
+            $data_source = new dataSource();
+            
+            $stmt1 = "UPDATE usuario SET estado = $estado WHERE idUsuario = $idUsuario"; 
+            
+            $resultado = $data_source->ejecutarActualizacion($stmt1, array()); 
+
+            return $resultado;
+        }
 /*
         public function verUsuarios(){
             $data_source = new DataSource();

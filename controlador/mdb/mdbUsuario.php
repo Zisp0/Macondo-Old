@@ -51,6 +51,11 @@
         $dao=new usuarioDAO();
         return $dao->buscarUsuarioPorCorreo($correo);
     }
+
+    function actualizarEstadoUsuario($idUsuario, $estado) {
+        $dao=new usuarioDAO();
+        return $dao->actualizarEstadoUsuario($idUsuario, $estado);
+    }
 /*
     function verUsuarios(){
         $dao=new UsuarioDAO();

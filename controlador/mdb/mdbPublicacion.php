@@ -26,4 +26,9 @@
         return $dao->buscarPublicaciones();
     }
 
+    function actualizarEstadoPublicacion($idPublicacion, $estado) {
+        $dao=new publicacionDAO();
+        return $dao->actualizarEstadoPublicacion($idPublicacion, $estado);
+    }
+
 ?>
