@@ -68,3 +68,4 @@ CREATE TABLE reaccionPublicacion
 );
 
 Insert into usuario (primernombre, primerapellido, seudonimo, rol, foto, estado, correo, contrasena) values ('juancho', 'polo', 'juancho1', 'user', NULL, 1, 'juancho@gmail.com', '12345');
+Insert into usuario (primernombre, primerapellido, seudonimo, rol, foto, estado, correo, contrasena) values ('admin', 'admin', 'admin1', 'admin', NULL, 1, 'admin@gmail.com', '1234567a');
