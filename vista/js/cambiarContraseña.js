@@ -46,7 +46,7 @@ $('#buttonSubirCambiosContraseña').click(function(){
 
 function cambiarContra(){
     $.ajax({
-        url: "../controlador/accion/act_ActualizarContrasena.php",
+        url: "../controlador/accion/act_actualizarContrasena.php",
         method: 'POST',
         dataType: 'text',
         data: {

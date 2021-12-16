@@ -229,6 +229,15 @@
 
             return $resultado;
         }
+
+        public function insertarToken($correo, $token){
+            $data_source = new dataSource();
+            $stmt1 = "UPDATE usuario SET token = '$token' WHERE correo = '$correo'"; 
+            
+            $resultado = $data_source->ejecutarActualizacion($stmt1, array()); 
+
+            return $resultado;
+        }
 /*
         public function verUsuarios(){
             $data_source = new DataSource();

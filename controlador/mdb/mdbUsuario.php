@@ -56,6 +56,11 @@
         $dao=new usuarioDAO();
         return $dao->actualizarEstadoUsuario($idUsuario, $estado);
     }
+
+    function insertarToken($correo, $token){
+        $dao=new usuarioDAO();
+        return $dao->insertarToken($correo, $token);
+    }
 /*
     function verUsuarios(){
         $dao=new UsuarioDAO();

@@ -23,17 +23,18 @@
                 <p>Macondo</p>
             </div>
             <div class="containerInputs">
-                <form action="">
-                    <h1>Recupera tu cuenta</h1>
-                    <p>Introduce tu correo electrónico para recuperar tu contraseña</p>
-                    <input type="text" placeholder="Introduce tu correo electrónico">
-                    <div class="containerBotones">
-                        <button id="buttonCancelar" type="reset" onclick="location.href='login.php'">Cancelar</button>
-                        <button type="submit" id="buttonRecuperarContraseña">Recuperar</button>
-                    </div> 
-                </form>         
+                <h1>Recupera tu cuenta</h1>
+                <input type="email" placeholder="Introduce tu correo electrónico" id="inputCorreo">
+                <div class="containerBotones">
+                    <button id="buttonCancelar" type="reset" onclick="location.href='login.php'">Cancelar</button>
+                    <button id="buttonRecuperarContraseña">Recuperar</button>
+                </div>         
             </div>
         </div>       
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/olvidarContraseña.js"></script>
+    
 </body>
 </html>
